@@ -5,6 +5,7 @@
 
 [node name="main_assets" type="Node3D" unique_id=1377272709]
 
-[node name="SM_Wall_Stone_01_Sml" parent="." unique_id=2081325232 instance=ExtResource("2_brqri")]
-
 [node name="SM_Floor_Flagstone_01" parent="." unique_id=840196646 instance=ExtResource("1_ig3v6")]
+
+[node name="SM_Wall_Stone_01_Sml" parent="." unique_id=2081325232 instance=ExtResource("2_brqri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
