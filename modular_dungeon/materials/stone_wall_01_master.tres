@@ -8,6 +8,7 @@
 
 [resource]
 resource_name = "stone_wall_01_master"
+cull_mode = 2
 albedo_texture = ExtResource("1_owjoo")
 metallic = 1.0
 metallic_texture = ExtResource("3_mb4oa")

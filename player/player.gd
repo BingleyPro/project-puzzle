@@ -8,6 +8,7 @@ const JUMP_VELOCITY = 4.5
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	$Head/Camera3D/RayCast3D.add_exception(self)
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape"):
@@ -27,6 +28,14 @@ func _unhandled_input(event: InputEvent) -> void:
 			#	deg_to_red(-85),
 			#	deg_to_rad(85)
 			#)
+			
+	if Input.is_action_just_pressed("interact"):
+		var ray: RayCast3D = $Head/Camera3D/RayCast3D
+		ray.force_raycast_update()
+		
+		var target = ray.get_collider() as Node
+		if target != null and target.has_method("interact"):
+			target.call("interact")
 
 func _physics_process(delta):
 	# Add the gravity.
