@@ -41,8 +41,15 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nbquv")
 
-[node name="SM_Wall_Stone_01_Sml" type="Node3D" unique_id=422562966]
+[sub_resource type="BoxShape3D" id="BoxShape3D_tb07l"]
+size = Vector3(0.09020996, 4.0059204, 3.9750977)
 
-[node name="SM_Wall_Stone_01_Sml" type="MeshInstance3D" parent="." unique_id=2081325232]
+[node name="SM_Wall_Stone_01_Sml" type="MeshInstance3D" unique_id=2081325232]
 mesh = SubResource("ArrayMesh_4wn6k")
 surface_material_override/0 = ExtResource("1_rfs2a")
+
+[node name="SM_Wall_Stone_01_Sml" type="StaticBody3D" parent="." unique_id=716106174]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Wall_Stone_01_Sml" unique_id=117790324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06365967, 2.007904, -1.9995117)
+shape = SubResource("BoxShape3D_tb07l")

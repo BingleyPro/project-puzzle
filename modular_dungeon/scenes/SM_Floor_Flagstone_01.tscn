@@ -46,12 +46,12 @@ shadow_mesh = SubResource("ArrayMesh_m24re")
 [sub_resource type="BoxShape3D" id="BoxShape3D_tb07l"]
 size = Vector3(4, 0.1180664, 4)
 
-[node name="SM_Floor_Flagstone_01" type="StaticBody3D" unique_id=1539100859]
-
-[node name="SM_Floor_Flagstone_01" type="MeshInstance3D" parent="." unique_id=840196646]
+[node name="SM_Floor_Flagstone_01" type="MeshInstance3D" unique_id=840196646]
 mesh = SubResource("ArrayMesh_s0x5x")
 surface_material_override/0 = ExtResource("1_wa4xv")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=543198503]
+[node name="SM_Floor_Flagstone_01" type="StaticBody3D" parent="." unique_id=1539100859]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Floor_Flagstone_01" unique_id=543198503]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015014648, -0.041748032, -0.038215637)
 shape = SubResource("BoxShape3D_tb07l")
