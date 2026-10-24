@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bopprcmp03xxp"]
+
+[ext_resource type="Texture2D" uid="uid://pve40polcw1l" path="res://assets/ModularDungeonCollection_Textures/T_WoodTrunk_01_BaseColor.png" id="1_wnewf"]
+[ext_resource type="Texture2D" uid="uid://cpwwqf80rm8bl" path="res://assets/ModularDungeonCollection_Textures/T_WoodTrunk_01_Occlusion.png" id="2_fwrud"]
+[ext_resource type="Texture2D" uid="uid://ch4r3xu2s76co" path="res://assets/ModularDungeonCollection_Textures/T_WoodTrunk_01_Metallic.png" id="3_pu08p"]
+[ext_resource type="Texture2D" uid="uid://c7psufd1vjn20" path="res://assets/ModularDungeonCollection_Textures/T_WoodTrunk_01_Normal.png" id="4_dm5fi"]
+[ext_resource type="Texture2D" uid="uid://dq7nlv0jkh7gn" path="res://assets/ModularDungeonCollection_Textures/T_WoodTrunk_01_Roughness.png" id="5_qov1r"]
+
+[resource]
+resource_name = "woodtrunk_01"
+albedo_texture = ExtResource("1_wnewf")
+metallic = 1.0
+metallic_texture = ExtResource("3_pu08p")
+roughness_texture = ExtResource("5_qov1r")
+normal_enabled = true
+normal_texture = ExtResource("4_dm5fi")
+ao_enabled = true
+ao_texture = ExtResource("2_fwrud")

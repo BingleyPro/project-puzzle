@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cotrvbbx2o8t"]
+
+[ext_resource type="Texture2D" uid="uid://bcvuhtjuwb6ih" path="res://assets/ModularDungeonCollection_Textures/T_Chandelier_01_BaseColor.png" id="1_6i3bg"]
+[ext_resource type="Texture2D" uid="uid://dungka7kojxn8" path="res://assets/ModularDungeonCollection_Textures/T_Chandelier_01_Occlusion.png" id="2_q6hd8"]
+[ext_resource type="Texture2D" uid="uid://5q0mb536nxwv" path="res://assets/ModularDungeonCollection_Textures/T_Chandelier_01_Metallic.png" id="3_etu8e"]
+[ext_resource type="Texture2D" uid="uid://dvq13jscg2vbc" path="res://assets/ModularDungeonCollection_Textures/T_Chandelier_01_Normal.png" id="4_8gey8"]
+[ext_resource type="Texture2D" uid="uid://c4mlcbgdenr7c" path="res://assets/ModularDungeonCollection_Textures/T_Chandelier_01_Roughness.png" id="5_onm16"]
+
+[resource]
+resource_name = "chandelier_01"
+albedo_texture = ExtResource("1_6i3bg")
+metallic = 1.0
+metallic_texture = ExtResource("3_etu8e")
+roughness_texture = ExtResource("5_onm16")
+normal_enabled = true
+normal_texture = ExtResource("4_8gey8")
+ao_enabled = true
+ao_texture = ExtResource("2_q6hd8")

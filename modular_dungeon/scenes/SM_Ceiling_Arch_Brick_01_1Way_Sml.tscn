@@ -1,0 +1,45 @@
+[gd_scene format=4 uid="uid://vvq4ablod4c0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fqxc6"]
+resource_name = "M_Ceiling_Arch_Brick_01_Master"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+normal_enabled = true
+normal_scale = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lis4x"]
+_surfaces = [{
+"aabb": AABB(2.3841858e-07, 0, -3.7717063, 3.9999995, 1.7787836, 3.5434127),
+"format": 34359742465,
+"index_count": 120,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAgAEAAAAAwAFAAEABAACAAYABQADAAcABgAIAAQABwAJAAUACAAGAAoACQAHAAsACgAMAAgACwANAAkADAAKAA4ADQALAA8ADgAQAAwADwARAA0AEAAOABIAEQAPABMAEgAUABAAEwAVABEAFAASABYAFQATABcAFgAYABQAFwAZABUAGAAWABoAGQAXABsAGgAcABgAGwAdABkAHQAbAB4AHgAfAB0AHAAaACAAIAAhABwAIQAgACIAIgAjACEAIwAiACQAJAAlACMAJQAkACYAJgAnACUAJwAmACgAKAApACcA"),
+"name": "M_Ceiling_Arch_Brick_01_Master",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 42,
+"vertex_data": PackedByteArray("AACANO6u2T8oRsu///9/QO6u2T8oRsu///9/QNpP4D+yUeW/AACANMxG0D9GI6m/AACANNpP4D+yUeW///9/QMxG0D9GI6m///9/QC6v4z8AAADAAACANFpBwD/8v4q/AACANC6v4z8AAADA//9/QFpBwD/8v4q///9/QNpP4D8nVw3AAACANHY2oD9umUS/AACANNpP4D8nVw3A//9/QHY2oD9umUS///9/QO6u2T/sXBrAAACANJIrgD+4wg+/AACANO6u2T/sXBrA//9/QJIrgD+4wg+///9/QMxG0D9cbivAAACANFxBQD8cg9m+AACANMxG0D9cbivA//9/QFxBQD8cg9m+//9/QFpBwD8DoDrAAACANJQrAD/YsKm+AACANFpBwD8DoDrA//9/QJQrAD/YsKm+//9/QHY2oD+k2U7AAACANJArgD5MloW+AACANHY2oD+k2U7A//9/QJArgD5MloW+AACANAAAAADPxWm+//9/QAAAAADPxWm+//9/QJIrgD9RD1zAAACANJIrgD9RD1zA//9/QFxBQD+cz2TAAACANFxBQD+cz2TA//9/QJQrAD/lyWrAAACANJQrAD/lyWrA//9/QJArgD42TW/AAACANJArgD42TW/A//9/QAAAAACjY3HAAACANAAAAACjY3HA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vn0tf"]
+resource_name = "Plane_016"
+_surfaces = [{
+"aabb": AABB(2.3841858e-07, 0, -3.7717063, 3.9999995, 1.7787836, 3.5434127),
+"attribute_data": PackedByteArray("Oq4qOaoI2T526H8/vgjZPnbofz+2guw+Oq4qOWxfvz46rio5soLsPnbofz+iX78+duh/PwAAAD86rio5MHqmPjquKjn8//8+duh/P3J6pj526H8/pb4JPzquKjmOFIE+Oq4qOaS+CT926H8/yhSBPnbofz+jexM/Oq4qObz3RT46rio5qXsTP3bofz80+EU+duh/Py9QID86rio5dAwRPjquKjlGUCA/duh/P/gMET526H8/ycIsPzquKjkA9b49Oq4qOebCLD926H8/WPa+PXbofz+edT8/Oq4qOVDrPD06rio5tnU/P3bofz/Q7Dw9Oq4qOQAIyjl26H8/AADLOXbofz/0gU4/Oq4qOQ6CTj926H8/w7xbPzquKjngvFs/duh/PzohaD86rio5XiFoP3bofz80MXQ/Oq4qOUwxdD926H8/pOZ/PzquKjnA5n8/"),
+"format": 34359742487,
+"index_count": 120,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAgAEAAAAAwAFAAEABAACAAYABQADAAcABgAIAAQABwAJAAUACAAGAAoACQAHAAsACgAMAAgACwANAAkADAAKAA4ADQALAA8ADgAQAAwADwARAA0AEAAOABIAEQAPABMAEgAUABAAEwAVABEAFAASABYAFQATABcAFgAYABQAFwAZABUAGAAWABoAGQAXABsAGgAcABgAGwAdABkAHQAbAB4AHgAfAB0AHAAaACAAIAAhABwAIQAgACIAIgAjACEAIwAiACQAJAAlACMAJQAkACYAJgAnACUAJwAmACgAKAApACcA"),
+"material": SubResource("StandardMaterial3D_fqxc6"),
+"name": "M_Ceiling_Arch_Brick_01_Master",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 42,
+"vertex_data": PackedByteArray("AACANO6u2T8oRsu///9/QO6u2T8oRsu///9/QNpP4D+yUeW/AACANMxG0D9GI6m/AACANNpP4D+yUeW///9/QMxG0D9GI6m///9/QC6v4z8AAADAAACANFpBwD/8v4q/AACANC6v4z8AAADA//9/QFpBwD/8v4q///9/QNpP4D8nVw3AAACANHY2oD9umUS/AACANNpP4D8nVw3A//9/QHY2oD9umUS///9/QO6u2T/sXBrAAACANJIrgD+4wg+/AACANO6u2T/sXBrA//9/QJIrgD+4wg+///9/QMxG0D9cbivAAACANFxBQD8cg9m+AACANMxG0D9cbivA//9/QFxBQD8cg9m+//9/QFpBwD8DoDrAAACANJQrAD/YsKm+AACANFpBwD8DoDrA//9/QJQrAD/YsKm+//9/QHY2oD+k2U7AAACANJArgD5MloW+AACANHY2oD+k2U7A//9/QJArgD5MloW+AACANAAAAADPxWm+//9/QAAAAADPxWm+//9/QJIrgD9RD1zAAACANJIrgD9RD1zA//9/QFxBQD+cz2TAAACANFxBQD+cz2TA//9/QJQrAD/lyWrAAACANJQrAD/lyWrA//9/QJArgD42TW/AAACANJArgD42TW/A//9/QAAAAACjY3HAAACANAAAAACjY3HAz5oAAP7//7/PmgAA/v//v2iUAAD+//+/TqQAAP7//79olAAA/v//v06kAAD+//+//38AAP7//7+AsgAA/v//v/9/AAD+//+/gLIAAP7//7//f2gU/v//v16/AAD+//+//39oFP///79evwAA/v//v/9/0Br///+/WcwAAP7//7//f9Aa/v//v1nMAAD+//+//39OJP7//7/b1wAA/v//v/9/TiT+//+/29cAAP7//7//f4Ay/v//v3jgAAD+//+//3+AMv7//7944AAA/v//v/9/Xz/+//+/O+oAAP7//7//f18//v//vzvqAAD+//+/PfEAAP7//7898QAA/v//v/9/Wkz+//+//39aTP7//7//f9xX/v//v/9/3Ff+//+//395YP7//7//f3lg/v//v/9/O2r+//+//387av7//7//fz5x/v//v/9/PnH+//+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lis4x")
+
+[node name="SM_Ceiling_Arch_Brick_01_1Way_Sml" type="Node3D" unique_id=509658663]
+
+[node name="SM_Ceiling_Arch_Brick_01_1Way_Sml" type="MeshInstance3D" parent="." unique_id=1477285003]
+mesh = SubResource("ArrayMesh_vn0tf")

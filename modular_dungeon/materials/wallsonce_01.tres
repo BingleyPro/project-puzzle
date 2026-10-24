@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c8miuw3bd6huo"]
+
+[ext_resource type="Texture2D" uid="uid://dqn5t4t578645" path="res://assets/ModularDungeonCollection_Textures/T_WallSonce_01_BaseColor.png" id="1_x5gda"]
+[ext_resource type="Texture2D" uid="uid://dx0jwb0hpnyqt" path="res://assets/ModularDungeonCollection_Textures/T_WallSonce_01_Occlusion.png" id="2_d0igs"]
+[ext_resource type="Texture2D" uid="uid://c0hnmydtsycfk" path="res://assets/ModularDungeonCollection_Textures/T_WallSonce_01_Metallic.png" id="3_hrnca"]
+[ext_resource type="Texture2D" uid="uid://cdbe33tk6k17m" path="res://assets/ModularDungeonCollection_Textures/T_WallSonce_01_Normal.png" id="4_mdlu5"]
+[ext_resource type="Texture2D" uid="uid://db573d35550yc" path="res://assets/ModularDungeonCollection_Textures/T_WallSonce_01_Roughness.png" id="5_f3p7j"]
+
+[resource]
+resource_name = "wallsonce_01"
+albedo_texture = ExtResource("1_x5gda")
+metallic = 1.0
+metallic_texture = ExtResource("3_hrnca")
+roughness_texture = ExtResource("5_f3p7j")
+normal_enabled = true
+normal_texture = ExtResource("4_mdlu5")
+ao_enabled = true
+ao_texture = ExtResource("2_d0igs")

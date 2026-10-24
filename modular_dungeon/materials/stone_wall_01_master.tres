@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c7t77aldpv0eb"]
+
+[ext_resource type="Texture2D" uid="uid://3317ls3a5cnh" path="res://assets/ModularDungeonCollection_Textures/T_Stone_Wall_01_Master_BaseColor.png" id="1_owjoo"]
+[ext_resource type="Texture2D" uid="uid://ca0tbjfgicf5u" path="res://assets/ModularDungeonCollection_Textures/T_Stone_Wall_01_Master_Occlusion.png" id="2_t43ok"]
+[ext_resource type="Texture2D" uid="uid://bcvar0omiqdsa" path="res://assets/ModularDungeonCollection_Textures/T_Stone_Wall_01_Master_Metallic.png" id="3_mb4oa"]
+[ext_resource type="Texture2D" uid="uid://y3b378nxjgwi" path="res://assets/ModularDungeonCollection_Textures/T_Stone_Wall_01_Master_Normal.png" id="4_8eu8f"]
+[ext_resource type="Texture2D" uid="uid://cfvsx2bxgrgy0" path="res://assets/ModularDungeonCollection_Textures/T_Stone_Wall_01_Master_Roughness.png" id="5_pk383"]
+
+[resource]
+resource_name = "stone_wall_01_master"
+albedo_texture = ExtResource("1_owjoo")
+metallic = 1.0
+metallic_texture = ExtResource("3_mb4oa")
+roughness_texture = ExtResource("5_pk383")
+normal_enabled = true
+normal_texture = ExtResource("4_8eu8f")
+ao_enabled = true
+ao_texture = ExtResource("2_t43ok")

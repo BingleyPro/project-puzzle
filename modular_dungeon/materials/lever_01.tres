@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://iuerm5qphi6s"]
+
+[ext_resource type="Texture2D" uid="uid://bvtpdiacexo04" path="res://assets/ModularDungeonCollection_Textures/T_Lever_01_BaseColor.png" id="1_2jivr"]
+[ext_resource type="Texture2D" uid="uid://bf50emawkvecx" path="res://assets/ModularDungeonCollection_Textures/T_Lever_01_Occlusion.png" id="2_w2iql"]
+[ext_resource type="Texture2D" uid="uid://0erv3a6n6irl" path="res://assets/ModularDungeonCollection_Textures/T_Lever_01_Metallic.png" id="3_w11e4"]
+[ext_resource type="Texture2D" uid="uid://by6bmglg45y00" path="res://assets/ModularDungeonCollection_Textures/T_Lever_01_Normal.png" id="4_oc0q6"]
+[ext_resource type="Texture2D" uid="uid://dpmdxkpjjuukg" path="res://assets/ModularDungeonCollection_Textures/T_Lever_01_Roughness.png" id="5_ux4fq"]
+
+[resource]
+resource_name = "lever_01"
+albedo_texture = ExtResource("1_2jivr")
+metallic = 1.0
+metallic_texture = ExtResource("3_w11e4")
+roughness_texture = ExtResource("5_ux4fq")
+normal_enabled = true
+normal_texture = ExtResource("4_oc0q6")
+ao_enabled = true
+ao_texture = ExtResource("2_w2iql")

@@ -3,6 +3,30 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+@export var mouse_sensitivity: float = 0.002
+@onready var head: Node3D = $Head
+
+func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("escape"):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		
+	elif event is InputEventMouseButton:
+		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+			# Show mouse again
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		
+	if event is InputEventMouseMotion:
+		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			rotate_y(-event.screen_relative.x * mouse_sensitivity)
+			head.rotate_x(-event.screen_relative.y * mouse_sensitivity)
+			#head.rotation.x = clampf(
+			#	head.rotation.x,
+			#	deg_to_red(-85),
+			#	deg_to_rad(85)
+			#)
 
 func _physics_process(delta):
 	# Add the gravity.

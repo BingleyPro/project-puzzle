@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://hhfml3sakfal"]
+
+[ext_resource type="Texture2D" uid="uid://b4jp1kwsvlydq" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Stone_Shelf_Wall_01_BaseColor.png" id="1_fohuu"]
+[ext_resource type="Texture2D" uid="uid://byhrkmayctug0" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Stone_Shelf_Wall_01_Occlusion.png" id="2_djvsp"]
+[ext_resource type="Texture2D" uid="uid://b6jgm3po7a3am" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Stone_Shelf_Wall_01_Metallic.png" id="3_3g4yg"]
+[ext_resource type="Texture2D" uid="uid://bxvhs4vgf00ur" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Stone_Shelf_Wall_01_Normal.png" id="4_7uk8q"]
+[ext_resource type="Texture2D" uid="uid://beg431wy1y50r" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Stone_Shelf_Wall_01_Roughness.png" id="5_vpyck"]
+
+[resource]
+resource_name = "wall_stone_shelf_wall_01"
+albedo_texture = ExtResource("1_fohuu")
+metallic = 1.0
+metallic_texture = ExtResource("3_3g4yg")
+roughness_texture = ExtResource("5_vpyck")
+normal_enabled = true
+normal_texture = ExtResource("4_7uk8q")
+ao_enabled = true
+ao_texture = ExtResource("2_djvsp")

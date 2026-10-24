@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b3j2hlpe6gada"]
+
+[ext_resource type="Texture2D" uid="uid://c1wxqfmyi54st" path="res://assets/ModularDungeonCollection_Textures/T_Door_MetalGate_01_BaseColor.png" id="1_aepfn"]
+[ext_resource type="Texture2D" uid="uid://vj1oswp5dbdb" path="res://assets/ModularDungeonCollection_Textures/T_Door_MetalGate_01_Occlusion.png" id="2_yol8a"]
+[ext_resource type="Texture2D" uid="uid://birjywp71jnbf" path="res://assets/ModularDungeonCollection_Textures/T_Door_MetalGate_01_Metallic.png" id="3_wi8j7"]
+[ext_resource type="Texture2D" uid="uid://x2sb34n757hq" path="res://assets/ModularDungeonCollection_Textures/T_Door_MetalGate_01_Normal.png" id="4_tcjeb"]
+[ext_resource type="Texture2D" uid="uid://ohx50vendocc" path="res://assets/ModularDungeonCollection_Textures/T_Door_MetalGate_01_Roughness.png" id="5_bl285"]
+
+[resource]
+resource_name = "door_metalgate_01"
+albedo_texture = ExtResource("1_aepfn")
+metallic = 1.0
+metallic_texture = ExtResource("3_wi8j7")
+roughness_texture = ExtResource("5_bl285")
+normal_enabled = true
+normal_texture = ExtResource("4_tcjeb")
+ao_enabled = true
+ao_texture = ExtResource("2_yol8a")

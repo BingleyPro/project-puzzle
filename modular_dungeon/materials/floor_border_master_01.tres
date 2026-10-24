@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0k5oymno8v8r"]
+
+[ext_resource type="Texture2D" uid="uid://dab6qx0whl3if" path="res://assets/ModularDungeonCollection_Textures/T_Floor_Border_Master_01_BaseColor.png" id="1_2ty5g"]
+[ext_resource type="Texture2D" uid="uid://lue6stc4m2ka" path="res://assets/ModularDungeonCollection_Textures/T_Floor_Border_Master_01_Occlusion.png" id="2_7sak6"]
+[ext_resource type="Texture2D" uid="uid://bwurplskfu81q" path="res://assets/ModularDungeonCollection_Textures/T_Floor_Border_Master_01_Metallic.png" id="3_mn3a4"]
+[ext_resource type="Texture2D" uid="uid://ms6xknjn0yq3" path="res://assets/ModularDungeonCollection_Textures/T_Floor_Border_Master_01_Normal.png" id="4_02wgh"]
+[ext_resource type="Texture2D" uid="uid://b4b0jlvsnqysh" path="res://assets/ModularDungeonCollection_Textures/T_Floor_Border_Master_01_Roughness.png" id="5_cwr5c"]
+
+[resource]
+resource_name = "floor_border_master_01"
+albedo_texture = ExtResource("1_2ty5g")
+metallic = 1.0
+metallic_texture = ExtResource("3_mn3a4")
+roughness_texture = ExtResource("5_cwr5c")
+normal_enabled = true
+normal_texture = ExtResource("4_02wgh")
+ao_enabled = true
+ao_texture = ExtResource("2_7sak6")

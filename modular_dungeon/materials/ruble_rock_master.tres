@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b6atmlkxxbjrq"]
+
+[ext_resource type="Texture2D" uid="uid://duwkawlyg58eu" path="res://assets/ModularDungeonCollection_Textures/T_Ruble_Rock_Master_BaseColor.png" id="1_gvoog"]
+[ext_resource type="Texture2D" uid="uid://dp5wlbhv0qaks" path="res://assets/ModularDungeonCollection_Textures/T_Ruble_Rock_Master_Occlusion.png" id="2_mosuk"]
+[ext_resource type="Texture2D" uid="uid://yw6q2nkfryrl" path="res://assets/ModularDungeonCollection_Textures/T_Ruble_Rock_Master_Metallic.png" id="3_enbu1"]
+[ext_resource type="Texture2D" uid="uid://cff0st1mkimvk" path="res://assets/ModularDungeonCollection_Textures/T_Ruble_Rock_Master_Normal.png" id="4_5jc4a"]
+[ext_resource type="Texture2D" uid="uid://6krwcasa01n0" path="res://assets/ModularDungeonCollection_Textures/T_Ruble_Rock_Master_Roughness.png" id="5_31fa4"]
+
+[resource]
+resource_name = "ruble_rock_master"
+albedo_texture = ExtResource("1_gvoog")
+metallic = 1.0
+metallic_texture = ExtResource("3_enbu1")
+roughness_texture = ExtResource("5_31fa4")
+normal_enabled = true
+normal_texture = ExtResource("4_5jc4a")
+ao_enabled = true
+ao_texture = ExtResource("2_mosuk")

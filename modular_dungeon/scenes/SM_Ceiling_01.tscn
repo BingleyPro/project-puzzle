@@ -1,0 +1,48 @@
+[gd_scene format=4 uid="uid://dirbo3brf7y1"]
+
+[ext_resource type="Material" uid="uid://cip5bwltwe6no" path="res://modular_dungeon/materials/ceiling_01.tres" id="1_fnmwn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w61ss"]
+resource_name = "M_Ceiling_01"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+normal_enabled = true
+normal_scale = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qhbq2"]
+_surfaces = [{
+"aabb": AABB(0, 0, -4, 4, 1e-05, 4),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "M_Ceiling_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AACAQAAAAAAAAIDAAAAAAAAAAAAAAIDAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tlrma"]
+resource_name = "Plane"
+_surfaces = [{
+"aabb": AABB(0, 0, -4, 4, 1e-05, 4),
+"attribute_data": PackedByteArray("AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_w61ss"),
+"name": "M_Ceiling_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AACAQAAAAAAAAIDAAAAAAAAAAAAAAIDAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAA/38AAP///z//fwAA////P/9/AAD///8//38AAP///z8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qhbq2")
+
+[node name="SM_Ceiling_01" type="Node3D" unique_id=532975112]
+
+[node name="SM_Ceiling_01" type="MeshInstance3D" parent="." unique_id=580600136]
+mesh = SubResource("ArrayMesh_tlrma")
+surface_material_override/0 = ExtResource("1_fnmwn")

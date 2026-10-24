@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bi75hvowklygf"]
+
+[ext_resource type="Material" uid="uid://c7t77aldpv0eb" path="res://modular_dungeon/materials/stone_wall_01_master.tres" id="1_uejpg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wd14x"]
+resource_name = "M_Stone_Wall_01_Master"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+normal_enabled = true
+normal_scale = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tyny3"]
+_surfaces = [{
+"aabb": AABB(-1.7484555e-07, 0, -4, 1e-05, 2.0000007, 4),
+"format": 34359742465,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"name": "M_Stone_Wall_01_Master",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 46, 189, 59, 180, 3, 0, 0, 64, 0, 0, 128, 192, 46, 189, 59, 180, 0, 0, 0, 0, 0, 0, 128, 192)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xahyx"]
+resource_name = "Cube_001"
+_surfaces = [{
+"aabb": AABB(-1.7484555e-07, 0, -4, 1e-05, 2.0000007, 4),
+"attribute_data": PackedByteArray(0, 0, 128, 179, 252, 255, 127, 63, 254, 255, 127, 63, 246, 255, 255, 62, 254, 255, 127, 63, 252, 255, 127, 63),
+"format": 34359742487,
+"index_count": 3,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0),
+"material": SubResource("StandardMaterial3D_wd14x"),
+"name": "M_Stone_Wall_01_Master",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 3,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 46, 189, 59, 180, 3, 0, 0, 64, 0, 0, 128, 192, 46, 189, 59, 180, 0, 0, 0, 0, 0, 0, 128, 192, 255, 255, 255, 127, 255, 255, 255, 255, 255, 255, 255, 127, 255, 255, 255, 255, 255, 255, 255, 127, 255, 255, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_tyny3")
+
+[node name="SM_Stairs_Wall_01" type="Node3D" unique_id=797551798]
+
+[node name="SM_Stairs_Wall_01" type="MeshInstance3D" parent="." unique_id=2022971365]
+mesh = SubResource("ArrayMesh_xahyx")
+surface_material_override/0 = ExtResource("1_uejpg")

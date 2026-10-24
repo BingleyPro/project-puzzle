@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://gvunb430x8d"]
+
+[ext_resource type="Texture2D" uid="uid://cms31xnackdyx" path="res://assets/ModularDungeonCollection_Textures/T_BrickPile_Master_BaseColor.png" id="1_kue5s"]
+[ext_resource type="Texture2D" uid="uid://blq8f0phwwjn0" path="res://assets/ModularDungeonCollection_Textures/T_BrickPile_Master_Occlusion.png" id="2_yl315"]
+[ext_resource type="Texture2D" uid="uid://coondsdj5kbam" path="res://assets/ModularDungeonCollection_Textures/T_BrickPile_Master_Metallic.png" id="3_hl6f3"]
+[ext_resource type="Texture2D" uid="uid://0bdx806s16ct" path="res://assets/ModularDungeonCollection_Textures/T_BrickPile_Master_Normal.png" id="4_sjja1"]
+[ext_resource type="Texture2D" uid="uid://ddvvkefixkekv" path="res://assets/ModularDungeonCollection_Textures/T_BrickPile_Master_Roughness.png" id="5_xari8"]
+
+[resource]
+resource_name = "brickpile_master"
+albedo_texture = ExtResource("1_kue5s")
+metallic = 1.0
+metallic_texture = ExtResource("3_hl6f3")
+roughness_texture = ExtResource("5_xari8")
+normal_enabled = true
+normal_texture = ExtResource("4_sjja1")
+ao_enabled = true
+ao_texture = ExtResource("2_yl315")

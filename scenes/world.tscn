@@ -1,27 +1,44 @@
 [gd_scene format=3 uid="uid://b6uj77uyj7ib8"]
 
 [ext_resource type="PackedScene" uid="uid://dog1yaxc0rsto" path="res://player/player.tscn" id="1_nnsk1"]
+[ext_resource type="MeshLibrary" uid="uid://xd51bw2t6n4w" path="res://modular_dungeon/dungeon_meshes.tres" id="4_k0juu"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_tb07l"]
-size = Vector3(30, 1, 30)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rwgxs"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tb07l"]
-size = Vector3(30, 1, 30)
+[sub_resource type="Sky" id="Sky_4wyf3"]
+sky_material = SubResource("ProceduralSkyMaterial_rwgxs")
+
+[sub_resource type="Environment" id="Environment_k0juu"]
+background_mode = 2
+sky = SubResource("Sky_4wyf3")
+glow_enabled = true
 
 [node name="World" type="Node3D" unique_id=487424937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, 8)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=567888409]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=945805503]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-mesh = SubResource("BoxMesh_tb07l")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1130591191]
-shape = SubResource("BoxShape3D_tb07l")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=539279124]
+environment = SubResource("Environment_k0juu")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1155160265]
 transform = Transform3D(1, 0, 0, 0, 0.47492498, 0.8800263, 0, -0.8800263, 0.47492498, 0, 6.095272, 0)
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=589600018 instance=ExtResource("1_nnsk1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5442638, 1.5000005, 6.8699875)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5442638, 1.5000005, 2.8699875)
+
+[node name="Floor" type="GridMap" parent="." unique_id=169398095]
+mesh_library = ExtResource("4_k0juu")
+cell_size = Vector3(4, 2, 4)
+data = {
+"cells": PackedInt32Array(65532, 2, 1441792, 65533, 2, 1441792, 65534, 2, 1441792, 65535, 2, 1441792, 0, 2, 1441792, 1, 2, 1441792, 1, 1, 1441792, 0, 1, 1441792, 65535, 1, 1441792, 65534, 1, 1441792, 65534, 0, 1441792, 65533, 0, 1441792, 65533, 1, 1441792, 65532, 1, 1441792, 65532, 0, 1441792, 65535, 0, 1441792, 0, 0, 1441792, 1, 0, 1441792, 1, 65535, 1441792, 0, 65535, 1441792, 0, 65534, 1441792, 65535, 65534, 1441792, 65534, 65534, 1441792, 65533, 65534, 1441792, 65532, 65534, 1441792, 65532, 65535, 1441792, 65533, 65535, 1441792, 65534, 65535, 1441792, 65535, 65535, 1441792, 1, 65534, 1441792)
+}
+
+[node name="Walls" type="GridMap" parent="." unique_id=1408111889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 2)
+mesh_library = ExtResource("4_k0juu")
+cell_size = Vector3(4, 4, 4)
+data = {
+"cells": PackedInt32Array(65531, 65534, 1, 65531, 65535, 1, 65531, 0, 1, 65531, 1, 1, 65531, 2, 1, 65531, 65533, 1441793, 65532, 65533, 1441793, 65533, 65533, 1441793, 65534, 65533, 1441793, 65535, 65533, 1441793, 0, 65533, 1441793, 1, 65533, 655361, 1, 65534, 655361, 1, 65535, 655361, 1, 0, 655361, 1, 1, 655361, 1, 2, 1048577, 0, 2, 1048577, 65535, 2, 1048577, 65534, 2, 1048577, 65533, 2, 1048577, 65532, 2, 1048577)
+}

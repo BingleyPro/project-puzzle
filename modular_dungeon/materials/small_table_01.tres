@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dg73u30ustffl"]
+
+[ext_resource type="Texture2D" uid="uid://dtnfkn2eujm36" path="res://assets/ModularDungeonCollection_Textures/T_Small_Table_01_BaseColor.png" id="1_yucc5"]
+[ext_resource type="Texture2D" uid="uid://bn3uqf0k4bdhe" path="res://assets/ModularDungeonCollection_Textures/T_Small_Table_01_Occlusion.png" id="2_f88du"]
+[ext_resource type="Texture2D" uid="uid://mxsi3qy0gvn4" path="res://assets/ModularDungeonCollection_Textures/T_Small_Table_01_Metallic.png" id="3_81yfk"]
+[ext_resource type="Texture2D" uid="uid://bkjoi1gaxvmyv" path="res://assets/ModularDungeonCollection_Textures/T_Small_Table_01_Normal.png" id="4_yoyst"]
+[ext_resource type="Texture2D" uid="uid://bsgdqw2ncp68b" path="res://assets/ModularDungeonCollection_Textures/T_Small_Table_01_Roughness.png" id="5_jauu6"]
+
+[resource]
+resource_name = "small_table_01"
+albedo_texture = ExtResource("1_yucc5")
+metallic = 1.0
+metallic_texture = ExtResource("3_81yfk")
+roughness_texture = ExtResource("5_jauu6")
+normal_enabled = true
+normal_texture = ExtResource("4_yoyst")
+ao_enabled = true
+ao_texture = ExtResource("2_f88du")

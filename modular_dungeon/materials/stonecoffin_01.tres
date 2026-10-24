@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://blqly3l47kac"]
+
+[ext_resource type="Texture2D" uid="uid://cnkie27mpa73x" path="res://assets/ModularDungeonCollection_Textures/T_StoneCoffin_01_BaseColor.png" id="1_wsg40"]
+[ext_resource type="Texture2D" uid="uid://cj6hyj8rkwwyj" path="res://assets/ModularDungeonCollection_Textures/T_StoneCoffin_01_Occlusion.png" id="2_prlnk"]
+[ext_resource type="Texture2D" uid="uid://c0w81ss8jqmbt" path="res://assets/ModularDungeonCollection_Textures/T_StoneCoffin_01_Metallic.png" id="3_l0omv"]
+[ext_resource type="Texture2D" uid="uid://bsmhsvyjlyb05" path="res://assets/ModularDungeonCollection_Textures/T_StoneCoffin_01_Normal.png" id="4_xftho"]
+[ext_resource type="Texture2D" uid="uid://1a1ldqs2ux0i" path="res://assets/ModularDungeonCollection_Textures/T_StoneCoffin_01_Roughness.png" id="5_aceoh"]
+
+[resource]
+resource_name = "stonecoffin_01"
+albedo_texture = ExtResource("1_wsg40")
+metallic = 1.0
+metallic_texture = ExtResource("3_l0omv")
+roughness_texture = ExtResource("5_aceoh")
+normal_enabled = true
+normal_texture = ExtResource("4_xftho")
+ao_enabled = true
+ao_texture = ExtResource("2_prlnk")

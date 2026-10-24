@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://x7val35yjc2s"]
+
+[ext_resource type="Texture2D" uid="uid://sciam8x8kgmd" path="res://assets/ModularDungeonCollection_Textures/T_Shelf_01_BaseColor.png" id="1_osvv7"]
+[ext_resource type="Texture2D" uid="uid://dlctc58bahern" path="res://assets/ModularDungeonCollection_Textures/T_Shelf_01_Occlusion.png" id="2_1itn8"]
+[ext_resource type="Texture2D" uid="uid://cs5e1vgm4o21k" path="res://assets/ModularDungeonCollection_Textures/T_Shelf_01_Metallic.png" id="3_dv8q2"]
+[ext_resource type="Texture2D" uid="uid://ckrlvac3qgtif" path="res://assets/ModularDungeonCollection_Textures/T_Shelf_01_Normal.png" id="4_f8jon"]
+[ext_resource type="Texture2D" uid="uid://cpxd0tbnfg4ma" path="res://assets/ModularDungeonCollection_Textures/T_Shelf_01_Roughness.png" id="5_54jhf"]
+
+[resource]
+resource_name = "shelf_01"
+albedo_texture = ExtResource("1_osvv7")
+metallic = 1.0
+metallic_texture = ExtResource("3_dv8q2")
+roughness_texture = ExtResource("5_54jhf")
+normal_enabled = true
+normal_texture = ExtResource("4_f8jon")
+ao_enabled = true
+ao_texture = ExtResource("2_1itn8")

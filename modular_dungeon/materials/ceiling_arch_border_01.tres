@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://yr6cxunqpwrx"]
+
+[ext_resource type="Texture2D" uid="uid://dhw8i6604q547" path="res://assets/ModularDungeonCollection_Textures/T_Ceiling_Arch_Border_01_BaseColor.png" id="1_5d283"]
+[ext_resource type="Texture2D" uid="uid://rjvat4g6asva" path="res://assets/ModularDungeonCollection_Textures/T_Ceiling_Arch_Border_01_Occlusion.png" id="2_eclvr"]
+[ext_resource type="Texture2D" uid="uid://budnx082g2eb8" path="res://assets/ModularDungeonCollection_Textures/T_Ceiling_Arch_Border_01_Metallic.png" id="3_dxp6t"]
+[ext_resource type="Texture2D" uid="uid://o7fqfu27p5cr" path="res://assets/ModularDungeonCollection_Textures/T_Ceiling_Arch_Border_01_Normal.png" id="4_m0oxn"]
+[ext_resource type="Texture2D" uid="uid://rdp5rmqbj0fh" path="res://assets/ModularDungeonCollection_Textures/T_Ceiling_Arch_Border_01_Roughness.png" id="5_ayv75"]
+
+[resource]
+resource_name = "ceiling_arch_border_01"
+albedo_texture = ExtResource("1_5d283")
+metallic = 1.0
+metallic_texture = ExtResource("3_dxp6t")
+roughness_texture = ExtResource("5_ayv75")
+normal_enabled = true
+normal_texture = ExtResource("4_m0oxn")
+ao_enabled = true
+ao_texture = ExtResource("2_eclvr")

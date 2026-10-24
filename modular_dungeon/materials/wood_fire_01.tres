@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ddwtyfmoof3lu"]
+
+[ext_resource type="Texture2D" uid="uid://vkip44xawe4d" path="res://assets/ModularDungeonCollection_Textures/T_Wood_Fire_01_BaseColor.png" id="1_4gdt7"]
+[ext_resource type="Texture2D" uid="uid://cosncbe6ajjc" path="res://assets/ModularDungeonCollection_Textures/T_Wood_Fire_01_Occlusion.png" id="2_2pv48"]
+[ext_resource type="Texture2D" uid="uid://cehvdi8flhnf6" path="res://assets/ModularDungeonCollection_Textures/T_Wood_Fire_01_Metallic.png" id="3_f8usg"]
+[ext_resource type="Texture2D" uid="uid://cup6iljp35ipm" path="res://assets/ModularDungeonCollection_Textures/T_Wood_Fire_01_Normal.png" id="4_1ldpa"]
+[ext_resource type="Texture2D" uid="uid://d0nl83jf2c53x" path="res://assets/ModularDungeonCollection_Textures/T_Wood_Fire_01_Roughness.png" id="5_3t2ky"]
+
+[resource]
+resource_name = "wood_fire_01"
+albedo_texture = ExtResource("1_4gdt7")
+metallic = 1.0
+metallic_texture = ExtResource("3_f8usg")
+roughness_texture = ExtResource("5_3t2ky")
+normal_enabled = true
+normal_texture = ExtResource("4_1ldpa")
+ao_enabled = true
+ao_texture = ExtResource("2_2pv48")

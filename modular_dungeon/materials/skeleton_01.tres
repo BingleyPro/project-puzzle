@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c8nx7644rbkwr"]
+
+[ext_resource type="Texture2D" uid="uid://dnbf81aekvpd5" path="res://assets/ModularDungeonCollection_Textures/T_Skeleton_01_BaseColor.png" id="1_n67vq"]
+[ext_resource type="Texture2D" uid="uid://hauij7ttl4tr" path="res://assets/ModularDungeonCollection_Textures/T_Skeleton_01_Occlusion.png" id="2_ict60"]
+[ext_resource type="Texture2D" uid="uid://ge8cpa6joq25" path="res://assets/ModularDungeonCollection_Textures/T_Skeleton_01_Metallic.png" id="3_3jwid"]
+[ext_resource type="Texture2D" uid="uid://bidexol7ejl4f" path="res://assets/ModularDungeonCollection_Textures/T_Skeleton_01_Normal.png" id="4_au8m0"]
+[ext_resource type="Texture2D" uid="uid://bi6l82qt2uocj" path="res://assets/ModularDungeonCollection_Textures/T_Skeleton_01_Roughness.png" id="5_vg2c5"]
+
+[resource]
+resource_name = "skeleton_01"
+albedo_texture = ExtResource("1_n67vq")
+metallic = 1.0
+metallic_texture = ExtResource("3_3jwid")
+roughness_texture = ExtResource("5_vg2c5")
+normal_enabled = true
+normal_texture = ExtResource("4_au8m0")
+ao_enabled = true
+ao_texture = ExtResource("2_ict60")

@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cqsy0vp2305vx"]
+
+[ext_resource type="Texture2D" uid="uid://b8kj0fe28i34d" path="res://assets/ModularDungeonCollection_Textures/T_Door_01_BaseColor.png" id="1_lrhbn"]
+[ext_resource type="Texture2D" uid="uid://c0j64owinj1f7" path="res://assets/ModularDungeonCollection_Textures/T_Door_01_Occlusion.png" id="2_nor5b"]
+[ext_resource type="Texture2D" uid="uid://eu4t1t8gp7lk" path="res://assets/ModularDungeonCollection_Textures/T_Door_01_Metallic.png" id="3_pxadv"]
+[ext_resource type="Texture2D" uid="uid://dy3s3huwvm23h" path="res://assets/ModularDungeonCollection_Textures/T_Door_01_Normal.png" id="4_4bmhl"]
+[ext_resource type="Texture2D" uid="uid://ymjyjn4htb8u" path="res://assets/ModularDungeonCollection_Textures/T_Door_01_Roughness.png" id="5_l06bg"]
+
+[resource]
+resource_name = "door_01"
+albedo_texture = ExtResource("1_lrhbn")
+metallic = 1.0
+metallic_texture = ExtResource("3_pxadv")
+roughness_texture = ExtResource("5_l06bg")
+normal_enabled = true
+normal_texture = ExtResource("4_4bmhl")
+ao_enabled = true
+ao_texture = ExtResource("2_nor5b")

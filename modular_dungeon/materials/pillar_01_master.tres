@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7fjyj6kfv0t"]
+
+[ext_resource type="Texture2D" uid="uid://da3ry63nkp02t" path="res://assets/ModularDungeonCollection_Textures/T_Pillar_01_Master_BaseColor.png" id="1_8c80s"]
+[ext_resource type="Texture2D" uid="uid://ceg70ehrwwelj" path="res://assets/ModularDungeonCollection_Textures/T_Pillar_01_Master_Occlusion.png" id="2_lm8mj"]
+[ext_resource type="Texture2D" uid="uid://bjutjajxhy88b" path="res://assets/ModularDungeonCollection_Textures/T_Pillar_01_Master_Metallic.png" id="3_ikkii"]
+[ext_resource type="Texture2D" uid="uid://carnrodcgx7gb" path="res://assets/ModularDungeonCollection_Textures/T_Pillar_01_Master_Normal.png" id="4_rtsp5"]
+[ext_resource type="Texture2D" uid="uid://c8exndyd066tx" path="res://assets/ModularDungeonCollection_Textures/T_Pillar_01_Master_Roughness.png" id="5_gebc2"]
+
+[resource]
+resource_name = "pillar_01_master"
+albedo_texture = ExtResource("1_8c80s")
+metallic = 1.0
+metallic_texture = ExtResource("3_ikkii")
+roughness_texture = ExtResource("5_gebc2")
+normal_enabled = true
+normal_texture = ExtResource("4_rtsp5")
+ao_enabled = true
+ao_texture = ExtResource("2_lm8mj")

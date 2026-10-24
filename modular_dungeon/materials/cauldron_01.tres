@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://4j64d5hu1te4"]
+
+[ext_resource type="Texture2D" uid="uid://csi8b7biykfyy" path="res://assets/ModularDungeonCollection_Textures/T_Cauldron_01_BaseColor.png" id="1_4qiq6"]
+[ext_resource type="Texture2D" uid="uid://dm6q03r8bstpp" path="res://assets/ModularDungeonCollection_Textures/T_Cauldron_01_Occlusion.png" id="2_y3lq6"]
+[ext_resource type="Texture2D" uid="uid://bkrmcat41f87u" path="res://assets/ModularDungeonCollection_Textures/T_Cauldron_01_Metallic.png" id="3_korbm"]
+[ext_resource type="Texture2D" uid="uid://chxx7yjkowkan" path="res://assets/ModularDungeonCollection_Textures/T_Cauldron_01_Normal.png" id="4_tu0nq"]
+[ext_resource type="Texture2D" uid="uid://1fqpbkxiljsn" path="res://assets/ModularDungeonCollection_Textures/T_Cauldron_01_Roughness.png" id="5_fwups"]
+
+[resource]
+resource_name = "cauldron_01"
+albedo_texture = ExtResource("1_4qiq6")
+metallic = 1.0
+metallic_texture = ExtResource("3_korbm")
+roughness_texture = ExtResource("5_fwups")
+normal_enabled = true
+normal_texture = ExtResource("4_tu0nq")
+ao_enabled = true
+ao_texture = ExtResource("2_y3lq6")

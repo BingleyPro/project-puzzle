@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://3on8qn4q2qbe"]
+
+[ext_resource type="Texture2D" uid="uid://8u5mkbayf0my" path="res://assets/ModularDungeonCollection_Textures/T_TorchSconce_01_BaseColor.png" id="1_nig5i"]
+[ext_resource type="Texture2D" uid="uid://bmrlw6alh787u" path="res://assets/ModularDungeonCollection_Textures/T_TorchSconce_01_Occlusion.png" id="2_id1ix"]
+[ext_resource type="Texture2D" uid="uid://dc8tptviqn8n1" path="res://assets/ModularDungeonCollection_Textures/T_TorchSconce_01_Metallic.png" id="3_sv784"]
+[ext_resource type="Texture2D" uid="uid://bpqpkrasnk6e2" path="res://assets/ModularDungeonCollection_Textures/T_TorchSconce_01_Normal.png" id="4_fjfbi"]
+[ext_resource type="Texture2D" uid="uid://bdvn77yqf6cyj" path="res://assets/ModularDungeonCollection_Textures/T_TorchSconce_01_Roughness.png" id="5_uooh2"]
+
+[resource]
+resource_name = "torchsconce_01"
+albedo_texture = ExtResource("1_nig5i")
+metallic = 1.0
+metallic_texture = ExtResource("3_sv784")
+roughness_texture = ExtResource("5_uooh2")
+normal_enabled = true
+normal_texture = ExtResource("4_fjfbi")
+ao_enabled = true
+ao_texture = ExtResource("2_id1ix")

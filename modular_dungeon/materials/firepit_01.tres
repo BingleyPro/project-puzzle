@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dxchp4posiabx"]
+
+[ext_resource type="Texture2D" uid="uid://dkg5j1jabvqw" path="res://assets/ModularDungeonCollection_Textures/T_FirePit_01_BaseColor.png" id="1_dxklf"]
+[ext_resource type="Texture2D" uid="uid://dhaol5x5bcg7e" path="res://assets/ModularDungeonCollection_Textures/T_FirePit_01_Occlusion.png" id="2_44olq"]
+[ext_resource type="Texture2D" uid="uid://yya4nx0ne843" path="res://assets/ModularDungeonCollection_Textures/T_FirePit_01_Metallic.png" id="3_bfuef"]
+[ext_resource type="Texture2D" uid="uid://cfiynul68l4g5" path="res://assets/ModularDungeonCollection_Textures/T_FirePit_01_Normal.png" id="4_6norj"]
+[ext_resource type="Texture2D" uid="uid://d1nj0rf12aflv" path="res://assets/ModularDungeonCollection_Textures/T_FirePit_01_Roughness.png" id="5_5y1j2"]
+
+[resource]
+resource_name = "firepit_01"
+albedo_texture = ExtResource("1_dxklf")
+metallic = 1.0
+metallic_texture = ExtResource("3_bfuef")
+roughness_texture = ExtResource("5_5y1j2")
+normal_enabled = true
+normal_texture = ExtResource("4_6norj")
+ao_enabled = true
+ao_texture = ExtResource("2_44olq")

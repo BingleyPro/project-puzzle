@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c284eobv2vasi"]
+
+[ext_resource type="Texture2D" uid="uid://djg8ycclspd6q" path="res://assets/ModularDungeonCollection_Textures/T_CrudeShelf_01_BaseColor.png" id="1_8te0s"]
+[ext_resource type="Texture2D" uid="uid://ciu3m0o3uktvj" path="res://assets/ModularDungeonCollection_Textures/T_CrudeShelf_01_Occlusion.png" id="2_rk3s8"]
+[ext_resource type="Texture2D" uid="uid://b45jhc0ufvfbl" path="res://assets/ModularDungeonCollection_Textures/T_CrudeShelf_01_Metallic.png" id="3_58qq2"]
+[ext_resource type="Texture2D" uid="uid://l2emcqilpci7" path="res://assets/ModularDungeonCollection_Textures/T_CrudeShelf_01_Normal.png" id="4_dx2r3"]
+[ext_resource type="Texture2D" uid="uid://t8tdrh72g4mp" path="res://assets/ModularDungeonCollection_Textures/T_CrudeShelf_01_Roughness.png" id="5_8iiwf"]
+
+[resource]
+resource_name = "crudeshelf_01"
+albedo_texture = ExtResource("1_8te0s")
+metallic = 1.0
+metallic_texture = ExtResource("3_58qq2")
+roughness_texture = ExtResource("5_8iiwf")
+normal_enabled = true
+normal_texture = ExtResource("4_dx2r3")
+ao_enabled = true
+ao_texture = ExtResource("2_rk3s8")

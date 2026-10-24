@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b4raw3wjwqv6m"]
+
+[ext_resource type="Texture2D" uid="uid://mpnwhcg4gxvh" path="res://assets/ModularDungeonCollection_Textures/T_CandleStand01_BaseColor.png" id="1_n2nd4"]
+[ext_resource type="Texture2D" uid="uid://d0kglbjsafy8d" path="res://assets/ModularDungeonCollection_Textures/T_CandleStand01_Occlusion.png" id="2_180yg"]
+[ext_resource type="Texture2D" uid="uid://bxjlhwk2m3q1u" path="res://assets/ModularDungeonCollection_Textures/T_CandleStand01_Metallic.png" id="3_48k52"]
+[ext_resource type="Texture2D" uid="uid://8mftxxh3s2o8" path="res://assets/ModularDungeonCollection_Textures/T_CandleStand01_Normal.png" id="4_ma52y"]
+[ext_resource type="Texture2D" uid="uid://dndgd73cfw3x6" path="res://assets/ModularDungeonCollection_Textures/T_CandleStand01_Roughness.png" id="5_r5ucs"]
+
+[resource]
+resource_name = "candlestand01"
+albedo_texture = ExtResource("1_n2nd4")
+metallic = 1.0
+metallic_texture = ExtResource("3_48k52")
+roughness_texture = ExtResource("5_r5ucs")
+normal_enabled = true
+normal_texture = ExtResource("4_ma52y")
+ao_enabled = true
+ao_texture = ExtResource("2_180yg")

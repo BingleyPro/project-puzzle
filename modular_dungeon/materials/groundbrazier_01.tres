@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bman2ep7s364k"]
+
+[ext_resource type="Texture2D" uid="uid://brbqowsnt64gq" path="res://assets/ModularDungeonCollection_Textures/T_GroundBrazier_01_BaseColor.png" id="1_fifxv"]
+[ext_resource type="Texture2D" uid="uid://d28qdgtc5m3yf" path="res://assets/ModularDungeonCollection_Textures/T_GroundBrazier_01_Occlusion.png" id="2_mfclf"]
+[ext_resource type="Texture2D" uid="uid://dp0llsxpqmoox" path="res://assets/ModularDungeonCollection_Textures/T_GroundBrazier_01_Metallic.png" id="3_5o03b"]
+[ext_resource type="Texture2D" uid="uid://bvddi1hwvi6aq" path="res://assets/ModularDungeonCollection_Textures/T_GroundBrazier_01_Normal.png" id="4_8yjx8"]
+[ext_resource type="Texture2D" uid="uid://2aoes055q7n2" path="res://assets/ModularDungeonCollection_Textures/T_GroundBrazier_01_Roughness.png" id="5_7morp"]
+
+[resource]
+resource_name = "groundbrazier_01"
+albedo_texture = ExtResource("1_fifxv")
+metallic = 1.0
+metallic_texture = ExtResource("3_5o03b")
+roughness_texture = ExtResource("5_7morp")
+normal_enabled = true
+normal_texture = ExtResource("4_8yjx8")
+ao_enabled = true
+ao_texture = ExtResource("2_mfclf")

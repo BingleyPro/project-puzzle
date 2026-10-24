@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bvss073cc1b4y"]
+
+[ext_resource type="Texture2D" uid="uid://8lc04x7volrk" path="res://assets/ModularDungeonCollection_Textures/T_Crate_01_BaseColor.png" id="1_n8t01"]
+[ext_resource type="Texture2D" uid="uid://dx7o6unwrrhby" path="res://assets/ModularDungeonCollection_Textures/T_Crate_01_Occlusion.png" id="2_gytbg"]
+[ext_resource type="Texture2D" uid="uid://ck5078tedhb61" path="res://assets/ModularDungeonCollection_Textures/T_Crate_01_Metallic.png" id="3_qcfjd"]
+[ext_resource type="Texture2D" uid="uid://u1c30wk5x8m" path="res://assets/ModularDungeonCollection_Textures/T_Crate_01_Normal.png" id="4_igc4s"]
+[ext_resource type="Texture2D" uid="uid://co4bghg27yxhj" path="res://assets/ModularDungeonCollection_Textures/T_Crate_01_Roughness.png" id="5_3u253"]
+
+[resource]
+resource_name = "crate_01"
+albedo_texture = ExtResource("1_n8t01")
+metallic = 1.0
+metallic_texture = ExtResource("3_qcfjd")
+roughness_texture = ExtResource("5_3u253")
+normal_enabled = true
+normal_texture = ExtResource("4_igc4s")
+ao_enabled = true
+ao_texture = ExtResource("2_gytbg")

@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://f2pfxfonqljg"]
+
+[ext_resource type="Texture2D" uid="uid://jvt2wvpgkifm" path="res://assets/ModularDungeonCollection_Textures/T_Floor_Flagstone_01_BaseColor.png" id="1_u7fci"]
+[ext_resource type="Texture2D" uid="uid://b5n8o4fxbr1cw" path="res://assets/ModularDungeonCollection_Textures/T_Floor_Flagstone_01_Occlusion.png" id="2_xnq7q"]
+[ext_resource type="Texture2D" uid="uid://bpe7pdh076wvw" path="res://assets/ModularDungeonCollection_Textures/T_Floor_Flagstone_01_Metallic.png" id="3_sd45q"]
+[ext_resource type="Texture2D" uid="uid://dqfn6tj6x5kn3" path="res://assets/ModularDungeonCollection_Textures/T_Floor_Flagstone_01_Normal.png" id="4_833qx"]
+[ext_resource type="Texture2D" uid="uid://n3b0fq5vbjn4" path="res://assets/ModularDungeonCollection_Textures/T_Floor_Flagstone_01_Roughness.png" id="5_vngb4"]
+
+[resource]
+resource_name = "floor_flagstone_01"
+albedo_texture = ExtResource("1_u7fci")
+metallic = 1.0
+metallic_texture = ExtResource("3_sd45q")
+roughness_texture = ExtResource("5_vngb4")
+normal_enabled = true
+normal_texture = ExtResource("4_833qx")
+ao_enabled = true
+ao_texture = ExtResource("2_xnq7q")

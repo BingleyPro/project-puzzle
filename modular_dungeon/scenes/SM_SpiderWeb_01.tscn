@@ -1,0 +1,44 @@
+[gd_scene format=4 uid="uid://bw1ok1lnhbbqt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2jwjk"]
+resource_name = "M_SpiderWeb_01"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2f11d"]
+_surfaces = [{
+"aabb": AABB(-1.0000002, -1.0000002, -7.54979e-08, 2.0000005, 2.0000005, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "M_SpiderWeb_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AgCAP/3/f79pIaKz/f9/vwIAgL9pIaIzAgCAv/3/fz9pIaIz/f9/PwIAgD9pIaKz")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qnjnt"]
+resource_name = "Plane"
+_surfaces = [{
+"aabb": AABB(-1.0000002, -1.0000002, -7.54979e-08, 2.0000005, 2.0000005, 1e-05),
+"attribute_data": PackedByteArray("b/l/PwCg0Thx+X8/c/l/P1qs0Thz+X8/WqzROABg0jg="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_2jwjk"),
+"name": "M_SpiderWeb_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AgCAP/3/f79pIaKz/f9/vwIAgL9pIaIzAgCAv/3/fz9pIaIz/f9/PwIAgD9pIaKz/3//f/9/AID/f/9//38AgP9//3//fwCA/3//f/9/AIA=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2f11d")
+
+[node name="SM_SpiderWeb_01" type="Node3D" unique_id=1331722174]
+
+[node name="SM_SpiderWeb_01" type="MeshInstance3D" parent="." unique_id=250609651]
+mesh = SubResource("ArrayMesh_qnjnt")

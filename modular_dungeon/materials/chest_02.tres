@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://brtdi7mn54j5l"]
+
+[ext_resource type="Texture2D" uid="uid://d0kgdb87dy42b" path="res://assets/ModularDungeonCollection_Textures/T_Chest_02_BaseColor.png" id="1_sd0jc"]
+[ext_resource type="Texture2D" uid="uid://ceyojl16ksum6" path="res://assets/ModularDungeonCollection_Textures/T_Chest_02_Occlusion.png" id="2_gvijm"]
+[ext_resource type="Texture2D" uid="uid://bk8b7inwte3jx" path="res://assets/ModularDungeonCollection_Textures/T_Chest_02_Metallic.png" id="3_otxag"]
+[ext_resource type="Texture2D" uid="uid://eovac7cewrsd" path="res://assets/ModularDungeonCollection_Textures/T_Chest_02_Normal.png" id="4_lt821"]
+[ext_resource type="Texture2D" uid="uid://bystyrc5sytfm" path="res://assets/ModularDungeonCollection_Textures/T_Chest_02_Roughness.png" id="5_lrp6d"]
+
+[resource]
+resource_name = "chest_02"
+albedo_texture = ExtResource("1_sd0jc")
+metallic = 1.0
+metallic_texture = ExtResource("3_otxag")
+roughness_texture = ExtResource("5_lrp6d")
+normal_enabled = true
+normal_texture = ExtResource("4_lt821")
+ao_enabled = true
+ao_texture = ExtResource("2_gvijm")

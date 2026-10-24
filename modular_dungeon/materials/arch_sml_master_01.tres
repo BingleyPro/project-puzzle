@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cjmck6o4hu8sn"]
+
+[ext_resource type="Texture2D" uid="uid://ca3r8mg64urqu" path="res://assets/ModularDungeonCollection_Textures/T_Arch_Sml_Master_01_BaseColor.png" id="1_80uqk"]
+[ext_resource type="Texture2D" uid="uid://dnbuv0ugn00tt" path="res://assets/ModularDungeonCollection_Textures/T_Arch_Sml_Master_01_Occlusion.png" id="2_j7y1v"]
+[ext_resource type="Texture2D" uid="uid://b7o6uooxt2wtg" path="res://assets/ModularDungeonCollection_Textures/T_Arch_Sml_Master_01_Metallic.png" id="3_ogycb"]
+[ext_resource type="Texture2D" uid="uid://b7f5lywpeyevw" path="res://assets/ModularDungeonCollection_Textures/T_Arch_Sml_Master_01_Normal.png" id="4_v2n18"]
+[ext_resource type="Texture2D" uid="uid://cw1kldlfs0cgk" path="res://assets/ModularDungeonCollection_Textures/T_Arch_Sml_Master_01_Roughness.png" id="5_6d0ba"]
+
+[resource]
+resource_name = "arch_sml_master_01"
+albedo_texture = ExtResource("1_80uqk")
+metallic = 1.0
+metallic_texture = ExtResource("3_ogycb")
+roughness_texture = ExtResource("5_6d0ba")
+normal_enabled = true
+normal_texture = ExtResource("4_v2n18")
+ao_enabled = true
+ao_texture = ExtResource("2_j7y1v")

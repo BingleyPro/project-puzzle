@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://esfu8aw4gths"]
+
+[ext_resource type="Texture2D" uid="uid://bhn1ugy3n6f0a" path="res://assets/ModularDungeonCollection_Textures/T_Candle_Master_01_BaseColor.png" id="1_e78m2"]
+[ext_resource type="Texture2D" uid="uid://u1piju0ehwrd" path="res://assets/ModularDungeonCollection_Textures/T_Candle_Master_01_Occlusion.png" id="2_cywg0"]
+[ext_resource type="Texture2D" uid="uid://bg8lvps2k76kw" path="res://assets/ModularDungeonCollection_Textures/T_Candle_Master_01_Metallic.png" id="3_ahhuh"]
+[ext_resource type="Texture2D" uid="uid://c4d7li1po14bx" path="res://assets/ModularDungeonCollection_Textures/T_Candle_Master_01_Normal.png" id="4_1xwvc"]
+[ext_resource type="Texture2D" uid="uid://cjhaue56w27wg" path="res://assets/ModularDungeonCollection_Textures/T_Candle_Master_01_Roughness.png" id="5_o1xyi"]
+
+[resource]
+resource_name = "candle_master_01"
+albedo_texture = ExtResource("1_e78m2")
+metallic = 1.0
+metallic_texture = ExtResource("3_ahhuh")
+roughness_texture = ExtResource("5_o1xyi")
+normal_enabled = true
+normal_texture = ExtResource("4_1xwvc")
+ao_enabled = true
+ao_texture = ExtResource("2_cywg0")

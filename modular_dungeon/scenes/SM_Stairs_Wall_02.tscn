@@ -1,0 +1,48 @@
+[gd_scene format=4 uid="uid://c0eyr4aig2pmq"]
+
+[ext_resource type="Material" uid="uid://c7t77aldpv0eb" path="res://modular_dungeon/materials/stone_wall_01_master.tres" id="1_tjeos"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bq3h1"]
+resource_name = "M_Stone_Wall_01_Master"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+normal_enabled = true
+normal_scale = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1bsjj"]
+_surfaces = [{
+"aabb": AABB(-1.7484555e-07, 0, -4, 1e-05, 4, 4),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "M_Stone_Wall_01_Master",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAANT//z8AAAAALr07tAAAgEAAAIDALr07tAAAAAAAAIDAAAAAAAAAAAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n7xkf"]
+resource_name = "Cube_002"
+_surfaces = [{
+"aabb": AABB(-1.7484555e-07, 0, -4, 1e-05, 4, 4),
+"attribute_data": PackedByteArray("FgAAsxQAAD///38/AAAAAP7/fz/8/38/AACAs/z/fz8="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_bq3h1"),
+"name": "M_Stone_Wall_01_Master",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAANT//z8AAAAALr07tAAAgEAAAIDALr07tAAAAAAAAIDAAAAAAAAAAAAAAAAA////f/////////9//////////3//////////f/////8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1bsjj")
+
+[node name="SM_Stairs_Wall_02" type="Node3D" unique_id=362030546]
+
+[node name="SM_Stairs_Wall_02" type="MeshInstance3D" parent="." unique_id=167843828]
+mesh = SubResource("ArrayMesh_n7xkf")
+surface_material_override/0 = ExtResource("1_tjeos")

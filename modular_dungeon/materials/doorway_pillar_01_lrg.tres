@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://hncy7thde3ap"]
+
+[ext_resource type="Texture2D" uid="uid://c5pfeikupdx5n" path="res://assets/ModularDungeonCollection_Textures/T_Doorway_Pillar_01_Lrg_BaseColor.png" id="1_gddli"]
+[ext_resource type="Texture2D" uid="uid://cn04c66qou86o" path="res://assets/ModularDungeonCollection_Textures/T_Doorway_Pillar_01_Lrg_Occlusion.png" id="2_r6ibf"]
+[ext_resource type="Texture2D" uid="uid://fm0p72np2jk7" path="res://assets/ModularDungeonCollection_Textures/T_Doorway_Pillar_01_Lrg_Metallic.png" id="3_vskqh"]
+[ext_resource type="Texture2D" uid="uid://b3vera4h547kv" path="res://assets/ModularDungeonCollection_Textures/T_Doorway_Pillar_01_Lrg_Normal.png" id="4_ppwx2"]
+[ext_resource type="Texture2D" uid="uid://bvn1ybh3a7hgi" path="res://assets/ModularDungeonCollection_Textures/T_Doorway_Pillar_01_Lrg_Roughness.png" id="5_xc1er"]
+
+[resource]
+resource_name = "doorway_pillar_01_lrg"
+albedo_texture = ExtResource("1_gddli")
+metallic = 1.0
+metallic_texture = ExtResource("3_vskqh")
+roughness_texture = ExtResource("5_xc1er")
+normal_enabled = true
+normal_texture = ExtResource("4_ppwx2")
+ao_enabled = true
+ao_texture = ExtResource("2_r6ibf")

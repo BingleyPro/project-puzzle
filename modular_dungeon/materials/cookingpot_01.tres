@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvoih26d0g4bb"]
+
+[ext_resource type="Texture2D" uid="uid://cwa7ww17k0i6d" path="res://assets/ModularDungeonCollection_Textures/T_CookingPot_01_BaseColor.png" id="1_mbguu"]
+[ext_resource type="Texture2D" uid="uid://kyrjovkihwg3" path="res://assets/ModularDungeonCollection_Textures/T_CookingPot_01_Occlusion.png" id="2_7ibvo"]
+[ext_resource type="Texture2D" uid="uid://dduuqcvncs2dq" path="res://assets/ModularDungeonCollection_Textures/T_CookingPot_01_Metallic.png" id="3_s2s73"]
+[ext_resource type="Texture2D" uid="uid://dn4bfau8d1o5u" path="res://assets/ModularDungeonCollection_Textures/T_CookingPot_01_Normal.png" id="4_wcucr"]
+[ext_resource type="Texture2D" uid="uid://bdp5vqm0yhfdk" path="res://assets/ModularDungeonCollection_Textures/T_CookingPot_01_Roughness.png" id="5_7yeok"]
+
+[resource]
+resource_name = "cookingpot_01"
+albedo_texture = ExtResource("1_mbguu")
+metallic = 1.0
+metallic_texture = ExtResource("3_s2s73")
+roughness_texture = ExtResource("5_7yeok")
+normal_enabled = true
+normal_texture = ExtResource("4_wcucr")
+ao_enabled = true
+ao_texture = ExtResource("2_7ibvo")

@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://uee0ijqo502o"]
+
+[ext_resource type="Texture2D" uid="uid://0vy3s36j8i51" path="res://assets/ModularDungeonCollection_Textures/T_Railing_Stone_01_BaseColor.png" id="1_3t8yx"]
+[ext_resource type="Texture2D" uid="uid://cyu8wq21b0k6u" path="res://assets/ModularDungeonCollection_Textures/T_Railing_Stone_01_Occlusion.png" id="2_qmwax"]
+[ext_resource type="Texture2D" uid="uid://du2vp3m3h01qu" path="res://assets/ModularDungeonCollection_Textures/T_Railing_Stone_01_Metallic.png" id="3_xil1o"]
+[ext_resource type="Texture2D" uid="uid://b8k75kuq53kko" path="res://assets/ModularDungeonCollection_Textures/T_Railing_Stone_01_Normal.png" id="4_bme8k"]
+[ext_resource type="Texture2D" uid="uid://md2rplkk5s4i" path="res://assets/ModularDungeonCollection_Textures/T_Railing_Stone_01_Roughness.png" id="5_psqq6"]
+
+[resource]
+resource_name = "railing_stone_01"
+albedo_texture = ExtResource("1_3t8yx")
+metallic = 1.0
+metallic_texture = ExtResource("3_xil1o")
+roughness_texture = ExtResource("5_psqq6")
+normal_enabled = true
+normal_texture = ExtResource("4_bme8k")
+ao_enabled = true
+ao_texture = ExtResource("2_qmwax")

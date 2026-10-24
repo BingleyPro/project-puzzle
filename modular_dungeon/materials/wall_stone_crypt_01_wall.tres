@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvf13g75hhytp"]
+
+[ext_resource type="Texture2D" uid="uid://uqik2ly3bc1y" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Stone_Crypt_01_Wall_BaseColor.png" id="1_rvics"]
+[ext_resource type="Texture2D" uid="uid://prlpnulj2ubl" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Stone_Crypt_01_Wall_Occlusion.png" id="2_wxr86"]
+[ext_resource type="Texture2D" uid="uid://di3qsxhe8j0ox" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Stone_Crypt_01_Wall_Metallic.png" id="3_kaywo"]
+[ext_resource type="Texture2D" uid="uid://db0txngj2tkv3" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Stone_Crypt_01_Wall_Normal.png" id="4_wba01"]
+[ext_resource type="Texture2D" uid="uid://dlr0t1hxwwtwc" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Stone_Crypt_01_Wall_Roughness.png" id="5_e3sx4"]
+
+[resource]
+resource_name = "wall_stone_crypt_01_wall"
+albedo_texture = ExtResource("1_rvics")
+metallic = 1.0
+metallic_texture = ExtResource("3_kaywo")
+roughness_texture = ExtResource("5_e3sx4")
+normal_enabled = true
+normal_texture = ExtResource("4_wba01")
+ao_enabled = true
+ao_texture = ExtResource("2_wxr86")

@@ -1,0 +1,48 @@
+[gd_scene format=4 uid="uid://ltbulegw5b1w"]
+
+[ext_resource type="Material" uid="uid://c7t77aldpv0eb" path="res://modular_dungeon/materials/stone_wall_01_master.tres" id="1_b50ic"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12g6g"]
+resource_name = "M_Stone_Wall_01_Master"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+normal_enabled = true
+normal_scale = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lhwqp"]
+_surfaces = [{
+"aabb": AABB(-1.7484555e-07, 0, -4, 1e-05, 4, 4),
+"format": 34359742465,
+"index_count": 63,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAACAAQAAAAEAAUAAAAFAAYAAAAGAAcAAAAHAAgAAAAIAAkACgAAAAkACgAJAAsACgALAAwACgAMAA0ACgANAA4ACgAOAA8ACgAPABAACgAQABEACgARABIAEwAKABIAEwASABQAEwAUABUAEwAVABYA"),
+"name": "M_Stone_Wall_01_Master",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 23,
+"vertex_data": PackedByteArray("Lr07tAAAgEAAAIDA6yEBtAAAAACfFUDA7iABtCE+8j9GFEDALr07tAAAAAAAAIDAg9v/s/V+BEBqcT7A/Yz6swZMEEAu0zrAevDxs/gAHEAk9DTA8Vjmsy/7JkDjDC3AMTbYs12HMEChaSPA7hDIs8bqN0CVZxjAAAAAAAAAgEAAAAAAu4a2s4FuPEAtcgzAk0Wks7yoPUAHAADAZwSSs4RuPEC9G+e/NXqAs8jqN0DuMM+/4Klgs2OHMEDTLLm/VmREszT7JkBK5qW/TTUts/0AHEDMF5a/OPwbsw5MEECyWYq/AAAAAAAAAAAAAAAAJF8Rs/l+BEAyHYO/cZIMsyQ+8j/yrn+/gY4MswAAAACUqX+/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2jb5y"]
+resource_name = "Cube_006"
+_surfaces = [{
+"aabb": AABB(-1.7484555e-07, 0, -4, 1e-05, 4, 4),
+"attribute_data": PackedByteArray("cvl/PwDg0ThUEkA/cvl/P/4QQD+W4AY/cvl/P3L5fz82bj4/kAL3PirQOj+gad8+bvE0P+wAyD6SCi0/oA2yPs5nIz9A9p4+VmYYPzAwkD4AoNE4AODROIhxDD8wKYc+CAAAP9q0hD4BHec+LCmHPmszzz4sMJA+cTC5Pjb2nj7j6qU+mA2yPjcdlj7kAMg+t1+KPpJp3z4AoNE4cvl/P5cjgz6EAvc+Drx/PpTgBj+ytn8+cvl/Pw=="),
+"format": 34359742487,
+"index_count": 63,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAACAAQAAAAEAAUAAAAFAAYAAAAGAAcAAAAHAAgAAAAIAAkACgAAAAkACgAJAAsACgALAAwACgAMAA0ACgANAA4ACgAOAA8ACgAPABAACgAQABEACgARABIAEwAKABIAEwASABQAEwAUABUAEwAVABYA"),
+"material": SubResource("StandardMaterial3D_12g6g"),
+"name": "M_Stone_Wall_01_Master",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 23,
+"vertex_data": PackedByteArray("Lr07tAAAgEAAAIDA6yEBtAAAAACfFUDA7iABtCE+8j9GFEDALr07tAAAAAAAAIDAg9v/s/V+BEBqcT7A/Yz6swZMEEAu0zrAevDxs/gAHEAk9DTA8Vjmsy/7JkDjDC3AMTbYs12HMEChaSPA7hDIs8bqN0CVZxjAAAAAAAAAgEAAAAAAu4a2s4FuPEAtcgzAk0Wks7yoPUAHAADAZwSSs4RuPEC9G+e/NXqAs8jqN0DuMM+/4Klgs2OHMEDTLLm/VmREszT7JkBK5qW/TTUts/0AHEDMF5a/OPwbsw5MEECyWYq/AAAAAAAAAAAAAAAAJF8Rs/l+BEAyHYO/cZIMsyQ+8j/yrn+/gY4MswAAAACUqX+/////fwAAAID///9//////////38AAACA////f/////////9/AAAAgP///3//////////f/////////9/AAAAgP///38AAACA////f/////////9//////////3//////////fwAAAID///9/AAAAgP///3//////////fwAAAID///9//////////38AAACA////fwAAAID///9//////////38AAACA////fwAAAID///9/AAAAgA==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lhwqp")
+
+[node name="SM_Wall_Doorway_Smooth_01" type="Node3D" unique_id=102171209]
+
+[node name="SM_Wall_Doorway_Smooth_01" type="MeshInstance3D" parent="." unique_id=1356510982]
+mesh = SubResource("ArrayMesh_2jb5y")
+surface_material_override/0 = ExtResource("1_b50ic")

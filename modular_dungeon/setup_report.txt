@@ -1,0 +1,20 @@
+Dungeon asset setup report
+Matching uses exact material names; no fuzzy matching.
+Source FBX and PNG files have not been changed.
+
+MISSING optional map: smooth_cove_master_01 / ao
+UNMATCHED: SM_CandleStand_01.fbx | node=SM_CandleStand_01 | surface=0 | material=M_CandleStand_01
+UNMATCHED: SM_Ceiling_Arch_Brick_01_1Way_Sml.fbx | node=SM_Ceiling_Arch_Brick_01_1Way_Sml | surface=0 | material=M_Ceiling_Arch_Brick_01_Master
+UNMATCHED: SM_Ceiling_Arch_Brick_01_2Way_Sml.fbx | node=SM_Ceiling_Arch_Brick_01_2Way_Sml | surface=0 | material=M_Ceiling_Arch_Brick_01_Master
+UNMATCHED: SM_Ceiling_Arch_Brick_01_3Way_Sml.fbx | node=SM_Ceiling_Arch_Brick_01_3Way_Sml | surface=0 | material=M_Ceiling_Arch_Brick_01_Master
+UNMATCHED: SM_Ceiling_Arch_Brick_01_4Way_Sml.fbx | node=SM_Ceiling_Arch_Brick_01_4Way_Sml | surface=0 | material=M_Ceiling_Arch_Brick_01_Master
+UNMATCHED: SM_Door_03.fbx | node=SM_Door_03 | surface=0 | material=M_Door_03
+UNMATCHED: SM_Floor_Dip_End.fbx | node=SM_Floor_Dip_End | surface=1 | material=M_Floor_Border_Master
+UNMATCHED: SM_Floor_Dip_Lshape.fbx | node=SM_Floor_Dip_Lshape | surface=1 | material=M_Floor_Border_Master
+UNMATCHED: SM_Floor_Dip_Tshape.fbx | node=SM_Floor_Dip_Tshape | surface=1 | material=M_Floor_Border_Master
+UNMATCHED: SM_SmallTable_01.fbx | node=SM_SmallTable_01 | surface=0 | material=M_SmallTable_01
+UNMATCHED: SM_SpiderWeb_01.fbx | node=SM_SpiderWeb_01 | surface=0 | material=M_SpiderWeb_01
+UNMATCHED: SM_StoneBench_01.fbx | node=SM_StoneBench_01 | surface=0 | material=SM_StoneBench_01
+UNMATCHED: SM_WallShelf_01.fbx | node=SM_WallShelf_01 | surface=0 | material=M_WallShelf_01
+
+Created scenes: 118 | Skipped existing scenes: 0 | Assigned surfaces: 120 | Unmatched surfaces: 13 | Errors: 0

@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bd60tv4psg66w"]
+
+[ext_resource type="Texture2D" uid="uid://7qcwm1a3ktva" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Iron_01_BaseColor.png" id="1_8tmfm"]
+[ext_resource type="Texture2D" uid="uid://cn6h41525atmp" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Iron_01_Occlusion.png" id="2_lu2pl"]
+[ext_resource type="Texture2D" uid="uid://dh58xomifquv2" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Iron_01_Metallic.png" id="3_ca36x"]
+[ext_resource type="Texture2D" uid="uid://jd42nofoftlf" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Iron_01_Normal.png" id="4_0shpj"]
+[ext_resource type="Texture2D" uid="uid://dh02o63nbpccp" path="res://assets/ModularDungeonCollection_Textures/T_Wall_Iron_01_Roughness.png" id="5_pqtgy"]
+
+[resource]
+resource_name = "wall_iron_01"
+albedo_texture = ExtResource("1_8tmfm")
+metallic = 1.0
+metallic_texture = ExtResource("3_ca36x")
+roughness_texture = ExtResource("5_pqtgy")
+normal_enabled = true
+normal_texture = ExtResource("4_0shpj")
+ao_enabled = true
+ao_texture = ExtResource("2_lu2pl")

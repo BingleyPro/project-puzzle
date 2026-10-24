@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d2rj0w75hhyvn"]
+
+[ext_resource type="Texture2D" uid="uid://d4l5mov6l34up" path="res://assets/ModularDungeonCollection_Textures/T_Lantern_01_BaseColor.png" id="1_578qo"]
+[ext_resource type="Texture2D" uid="uid://dkgl037xsut6f" path="res://assets/ModularDungeonCollection_Textures/T_Lantern_01_Occlusion.png" id="2_hfdwe"]
+[ext_resource type="Texture2D" uid="uid://guintq03np43" path="res://assets/ModularDungeonCollection_Textures/T_Lantern_01_Metallic.png" id="3_i4sw0"]
+[ext_resource type="Texture2D" uid="uid://bek7cfdj2mo3b" path="res://assets/ModularDungeonCollection_Textures/T_Lantern_01_Normal.png" id="4_k0bxg"]
+[ext_resource type="Texture2D" uid="uid://e4rqh6so0adh" path="res://assets/ModularDungeonCollection_Textures/T_Lantern_01_Roughness.png" id="5_ljkh2"]
+
+[resource]
+resource_name = "lantern_01"
+albedo_texture = ExtResource("1_578qo")
+metallic = 1.0
+metallic_texture = ExtResource("3_i4sw0")
+roughness_texture = ExtResource("5_ljkh2")
+normal_enabled = true
+normal_texture = ExtResource("4_k0bxg")
+ao_enabled = true
+ao_texture = ExtResource("2_hfdwe")

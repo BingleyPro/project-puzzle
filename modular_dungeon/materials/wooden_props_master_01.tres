@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dgga0lxis07rq"]
+
+[ext_resource type="Texture2D" uid="uid://biqugvimni1hv" path="res://assets/ModularDungeonCollection_Textures/T_Wooden_Props_Master_01_BaseColor.png" id="1_f2d4e"]
+[ext_resource type="Texture2D" uid="uid://ddtrg8vyo3pas" path="res://assets/ModularDungeonCollection_Textures/T_Wooden_Props_Master_01_Occlusion.png" id="2_eoa5d"]
+[ext_resource type="Texture2D" uid="uid://cks6ow5bwg1gf" path="res://assets/ModularDungeonCollection_Textures/T_Wooden_Props_Master_01_Metallic.png" id="3_3xjlg"]
+[ext_resource type="Texture2D" uid="uid://dydegkexifuha" path="res://assets/ModularDungeonCollection_Textures/T_Wooden_Props_Master_01_Normal.png" id="4_q6pcn"]
+[ext_resource type="Texture2D" uid="uid://25slqywf1hqn" path="res://assets/ModularDungeonCollection_Textures/T_Wooden_Props_Master_01_Roughness.png" id="5_tv4m5"]
+
+[resource]
+resource_name = "wooden_props_master_01"
+albedo_texture = ExtResource("1_f2d4e")
+metallic = 1.0
+metallic_texture = ExtResource("3_3xjlg")
+roughness_texture = ExtResource("5_tv4m5")
+normal_enabled = true
+normal_texture = ExtResource("4_q6pcn")
+ao_enabled = true
+ao_texture = ExtResource("2_eoa5d")
