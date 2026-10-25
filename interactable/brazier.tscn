@@ -3,6 +3,48 @@
 [ext_resource type="Script" uid="uid://bvu5uouubadqb" path="res://interactable/brazier.gd" id="1_ex1bx"]
 [ext_resource type="Material" uid="uid://dxa31c0psdjf6" path="res://modular_dungeon/materials/standingbrazier_01.tres" id="2_xucx2"]
 
+[sub_resource type="Gradient" id="Gradient_ex1bx"]
+offsets = PackedFloat32Array(0, 0.12107623, 1)
+colors = PackedColorArray(0.83607924, 0.6781332, 0, 1, 0.73336244, 0.3880025, 3.85046e-07, 1, 0.47058824, 0, 0.003921569, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_r1cag"]
+gradient = SubResource("Gradient_ex1bx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_45hi5"]
+emission_shape = 1
+emission_sphere_radius = 0.12
+direction = Vector3(0, 1, 0)
+spread = 15.0
+initial_velocity_min = 0.59999996
+initial_velocity_max = 1.0
+gravity = Vector3(0, 0.3, 0)
+scale_min = 0.59999996
+scale_max = 1.1999999
+color_ramp = SubResource("GradientTexture1D_r1cag")
+
+[sub_resource type="Gradient" id="Gradient_jxr4f"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y2r2r"]
+gradient = SubResource("Gradient_jxr4f")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m7te3"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("GradientTexture2D_y2r2r")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_ex1bx"]
+material = SubResource("StandardMaterial3D_m7te3")
+size = Vector2(0.25, 0.4)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tt0di"]
 resource_name = "M_StandingBrazier_01"
 vertex_color_use_as_albedo = true
@@ -49,6 +91,14 @@ data = PackedVector3Array(0.15359999, 0.2139, -0.027099999, 0.15709999, 0.2059, 
 
 [node name="Brazier" type="StaticBody3D" unique_id=881790179]
 script = ExtResource("1_ex1bx")
+
+[node name="Flames" type="GPUParticles3D" parent="." unique_id=1811427690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4984139, 0)
+amount = 40
+lifetime = 0.6
+preprocess = 0.6
+process_material = SubResource("ParticleProcessMaterial_45hi5")
+draw_pass_1 = SubResource("QuadMesh_ex1bx")
 
 [node name="SM_StandingBrazier_01" type="MeshInstance3D" parent="." unique_id=222554928]
 mesh = SubResource("ArrayMesh_m7te3")

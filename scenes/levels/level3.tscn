@@ -81,12 +81,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9758306, 2.0172853, 2.7609
 
 [node name="RigidBody3D" parent="." unique_id=1022620220 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.208866, 8.549491, 6.038986)
+can_pickup = false
 
 [node name="RigidBody3D2" parent="." unique_id=1194280991 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.605152, 22.198015, 6.2806377)
+can_pickup = false
 
 [node name="RigidBody3D3" parent="." unique_id=1751823971 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1367412, 34.81669, 13.967192)
+can_pickup = false
 
 [node name="Brazier2-1" parent="." unique_id=945242998 node_paths=PackedStringArray("puzzle") instance=ExtResource("4_t275y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.44006, 2, -25.68091)
@@ -126,81 +129,107 @@ can_pickup = false
 
 [node name="RigidBody3D6" parent="." unique_id=523500630 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.786312, 2.0172868, -18.241976)
+can_pickup = false
 
 [node name="RigidBody3D7" parent="." unique_id=588591761 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.686425, 3.0172882, -18.191584)
+can_pickup = false
 
 [node name="RigidBody3D8" parent="." unique_id=443524589 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.621574, 4.0172896, -18.107418)
+can_pickup = false
 
 [node name="RigidBody3D9" parent="." unique_id=2079020885 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5657, 5.0172906, -18.061193)
+can_pickup = false
 
 [node name="RigidBody3D10" parent="." unique_id=1461317522 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.498251, 6.017292, -17.992994)
+can_pickup = false
 
 [node name="RigidBody3D11" parent="." unique_id=1277247491 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.297102, 2.0172868, -18.242449)
+can_pickup = false
 
 [node name="RigidBody3D12" parent="." unique_id=1889605759 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.811812, 2.0172868, -18.15854)
+can_pickup = false
 
 [node name="RigidBody3D13" parent="." unique_id=522775993 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.777683, 3.0172877, -18.146658)
+can_pickup = false
 
 [node name="RigidBody3D14" parent="." unique_id=2090000576 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.6839075, 4.0172887, -18.110432)
+can_pickup = false
 
 [node name="RigidBody3D15" parent="." unique_id=2038322206 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9915447, 2.0172868, -18.090687)
+can_pickup = false
 
 [node name="RigidBody3D16" parent="." unique_id=2067216529 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.010748, 3.0172877, -18.041182)
+can_pickup = false
 
 [node name="RigidBody3D17" parent="." unique_id=1513122269 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.036378, 4.0172906, -17.915619)
+can_pickup = false
 
 [node name="RigidBody3D18" parent="." unique_id=376284756 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.064215, 5.0172906, -17.903276)
+can_pickup = false
 
 [node name="RigidBody3D19" parent="." unique_id=1329481609 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.092303, 6.0172915, -17.894903)
+can_pickup = false
 
 [node name="RigidBody3D20" parent="." unique_id=1545988509 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.100076, 7.0172935, -17.896988)
+can_pickup = false
 
 [node name="RigidBody3D21" parent="." unique_id=1652491909 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.134617, 8.017295, -17.829428)
+can_pickup = false
 
 [node name="RigidBody3D22" parent="." unique_id=157933300 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1276913, 2.0172868, -18.036016)
+can_pickup = false
 
 [node name="RigidBody3D23" parent="." unique_id=2004418783 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.179133, 3.0172877, -17.991856)
+can_pickup = false
 
 [node name="RigidBody3D24" parent="." unique_id=227004790 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1891584, 4.0172896, -17.985323)
+can_pickup = false
 
 [node name="RigidBody3D25" parent="." unique_id=2015014560 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.164695, 5.0172915, -17.99424)
+can_pickup = false
 
 [node name="RigidBody3D26" parent="." unique_id=619543470 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2025414, 6.017293, -17.978317)
+can_pickup = false
 
 [node name="RigidBody3D27" parent="." unique_id=479561600 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.278721, 7.0172944, -17.886768)
+can_pickup = false
 
 [node name="RigidBody3D28" parent="." unique_id=1775605822 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7537665, 2.0172873, -18.12189)
+can_pickup = false
 
 [node name="RigidBody3D29" parent="." unique_id=1885178174 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8033466, 3.0172887, -18.125505)
+can_pickup = false
 
 [node name="RigidBody3D30" parent="." unique_id=1736921897 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.841973, 4.01729, -18.11162)
+can_pickup = false
 
 [node name="RigidBody3D31" parent="." unique_id=2081634206 instance=ExtResource("7_a82vw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9444685, 5.0172915, -18.110271)
+can_pickup = false
 
 [node name="SM_Door_03" parent="." unique_id=1216345326 instance=ExtResource("3_72x3h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.978054, 2.0172844, -17.276155)

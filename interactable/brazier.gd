@@ -17,6 +17,8 @@ func interact() -> void:
 func set_lit(value: bool) -> void:
 	is_lit = value
 	$OmniLight3D.visible = value
+	$Flames.emitting = value
+	$Flames.visible = value
 	
 func highlight(enable: bool) -> void:
 	if highlight_mesh != null:
