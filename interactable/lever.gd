@@ -1,6 +1,7 @@
 extends AnimatableBody3D
 
 @export var swing_time: float = 1.0
+@export var target_door: Node3D
 
 @export var highlight_mesh: MeshInstance3D
 @export var highlight_material: Material
@@ -26,6 +27,10 @@ func highlight(enabled: bool) -> void:
 	
 func set_open(value: bool) -> void:
 	_is_open = value
+	
+	if is_instance_valid(target_door):
+		target_door.call("set_open", value)
+	
 	var target_x = _closed_x
 	if _is_open:
 		target_x += deg_to_rad(90)
