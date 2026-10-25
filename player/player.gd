@@ -41,11 +41,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			
 	if event.is_action_pressed("interact") and not event.is_echo():
 		if holding_object:
-			remove_collision_exception_with(held_object)
-			held_object.remove_collision_exception_with(self)
-			
-			held_object = null
-			holding_object = false
+			drop_held_object()
 			return
 		
 		ray.force_raycast_update()
@@ -59,6 +55,9 @@ func _unhandled_input(event: InputEvent) -> void:
 				# Pickup logic
 				held_object = target
 				holding_object = true
+				
+				held_object.sleeping = false
+				held_object.add_to_group("held")
 				
 				# Prevent crate collding with player
 				add_collision_exception_with(held_object)
@@ -87,6 +86,33 @@ func manage_interaction():
 			if focused_object.has_method("highlight"):
 				focused_object.call("highlight", true)
 				interaction_prompt.show()
+				
+func update_held_object():
+	var offset = hold_point.global_position - held_object.global_position
+	
+	if offset.length()> 3.5:
+		# If object gets too far, drop it
+		drop_held_object()
+		return
+	
+	var acceleration = (
+		offset * 80 + (velocity - held_object.linear_velocity) * 18 - get_gravity() * held_object.gravity_scale
+	)
+	
+	var force = (
+		acceleration.limit_length(150) * held_object.mass
+	)
+	
+	held_object.apply_central_force(force)
+	
+func drop_held_object() -> void:
+	if is_instance_valid(held_object):
+		remove_collision_exception_with(held_object)
+		held_object.remove_collision_exception_with(self)
+		held_object.remove_from_group("held")
+		
+		held_object = null
+		holding_object = false
 
 func _physics_process(delta):
 	speed_multipler = 1
@@ -114,21 +140,11 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED * speed_multipler)
 		velocity.z = move_toward(velocity.z, 0, SPEED * speed_multipler)
 		
-		# Handle held object
-		if holding_object:
-			var offset = (hold_point.global_position - held_object.global_position).normalized()
-			
-			var acceleration = (
-				offset * 40 - held_object.linear_velocity * 12
-			)
-			
-			var force = (
-				acceleration.limit_length(80) * held_object.mass
-			)
-			
-			held_object.apply_central_force(force)
+	move_and_slide()
+	
+	# Handle held object
+	if holding_object:
+		update_held_object()
 		
 	# Check any interactable objects
 	manage_interaction()
-
-	move_and_slide()

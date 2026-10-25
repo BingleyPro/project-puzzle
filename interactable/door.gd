@@ -38,6 +38,12 @@ func set_open(value: bool) -> void:
 	_tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 	_tween.set_trans(Tween.TRANS_SINE)
 	_tween.set_ease(Tween.EASE_IN_OUT)
+	
+	# Fix door 360deg issue
+	var shortest_target_y = (
+		rotation.y + angle_difference(rotation.y, target_y)
+	)
+	
 	_tween.tween_property(
-		self, "rotation:y", target_y, maxf(swing_time, 0.01)
+		self, "rotation:y", shortest_target_y, maxf(swing_time, 0.01)
 	)

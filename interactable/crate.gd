@@ -7,11 +7,6 @@ extends RigidBody3D
 
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 
-var carried = false
-var holder: PhysicsBody3D
-var previous_freeze = false
-var previous_freeze_mode = FREEZE_MODE_STATIC
-
 func _ready() -> void:
 	pass
 	
@@ -23,6 +18,6 @@ func highlight(enabled: bool) -> void:
 		highlight_mesh.material_overlay = (
 			highlight_material if enabled else null
 		)
-	
+
 func pickup():
 	pass
