@@ -5,6 +5,7 @@ extends Area3D
 var completed = false
 
 func _ready() -> void:
+	completion_panel.process_mode = Node.PROCESS_MODE_ALWAYS
 	completion_panel.hide()
 	
 	$CanvasLayer/CompletionPanel/CenterContainer/VBoxContainer/Button.pressed.connect(_on_menu_pressed)
