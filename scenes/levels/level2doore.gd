@@ -6,7 +6,7 @@ extends "res://interactable/door.gd"
 func interact():
 	pass
 	
-func set_open(value: bool) -> void:
+func set_open(_value: bool) -> void:
 	if not is_instance_valid(plate_a) or not is_instance_valid(plate_b):
 		return
 		

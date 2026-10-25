@@ -45,3 +45,6 @@ func set_open(value: bool) -> void:
 	_tween.tween_property(
 		self, "rotation:x", target_x, maxf(swing_time, 0.01)
 	)
+	
+func is_active() -> bool:
+	return _is_open

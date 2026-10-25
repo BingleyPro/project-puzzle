@@ -6,7 +6,7 @@ extends Node3D
 var pressed: bool = false
 var pressed_now = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	pressed_now = false
 	
 	for body in detector.get_overlapping_bodies():

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dog1yaxc0rsto" path="res://player/player.tscn" id="1_e0cvd"]
 [ext_resource type="MeshLibrary" uid="uid://xd51bw2t6n4w" path="res://modular_dungeon/dungeon_meshes.tres" id="2_71baw"]
 [ext_resource type="PackedScene" uid="uid://cd1kecojb3x83" path="res://modular_dungeon/scenes/SM_Door_02.tscn" id="3_niitk"]
+[ext_resource type="Script" uid="uid://ca6x1vxv8lt8y" path="res://scenes/levels/level2doora.gd" id="4_k0mew"]
 [ext_resource type="PackedScene" uid="uid://x55qni1kfe7t" path="res://interactable/pressure_plate.tscn" id="4_niitk"]
 [ext_resource type="PackedScene" uid="uid://cvcicdbr3bijr" path="res://interactable/lever.tscn" id="5_d5djh"]
 [ext_resource type="PackedScene" uid="uid://ci653t48aoaqv" path="res://interactable/crate.tscn" id="6_ok6xr"]
@@ -57,8 +58,11 @@ data = {
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.9745111, 2.0338478, -18.732363)
 openable = false
 
-[node name="DoorA" parent="." unique_id=1350161214 instance=ExtResource("3_niitk")]
+[node name="DoorA" parent="." unique_id=1350161214 node_paths=PackedStringArray("pressure_plate", "unlock_lever") instance=ExtResource("3_niitk")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.7666636, 2.0172863, -0.008601546)
+script = ExtResource("4_k0mew")
+pressure_plate = NodePath("../PlateA")
+unlock_lever = NodePath("../LeverB/SM_Lever_Handle_01")
 openable = false
 
 [node name="PlateA" parent="." unique_id=1749852476 node_paths=PackedStringArray("target_door") instance=ExtResource("4_niitk")]
@@ -78,15 +82,17 @@ target_door = NodePath("../../DoorA")
 [node name="Crate2" parent="." unique_id=1022620220 instance=ExtResource("6_ok6xr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.723392, 2.0172873, 6.412592)
 
-[node name="Plate1" parent="." unique_id=549271709 instance=ExtResource("4_niitk")]
+[node name="Plate1" parent="." unique_id=549271709 node_paths=PackedStringArray("target_door") instance=ExtResource("4_niitk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.79979, 2.3544884, -12.740776)
+target_door = NodePath("../DoorE")
 
 [node name="Plate2" parent="." unique_id=301718010 node_paths=PackedStringArray("target_door") instance=ExtResource("4_niitk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.852806, 2.3544884, -17.702736)
 target_door = NodePath("../DoorD")
 
-[node name="Plate3" parent="." unique_id=1473079334 instance=ExtResource("4_niitk")]
+[node name="Plate3" parent="." unique_id=1473079334 node_paths=PackedStringArray("target_door") instance=ExtResource("4_niitk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.09198, 2.3544884, -12.927046)
+target_door = NodePath("../DoorE")
 
 [node name="Crate" parent="." unique_id=1104650579 instance=ExtResource("6_ok6xr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.026564, 2.0172868, -25.444754)
