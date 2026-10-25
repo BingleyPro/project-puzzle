@@ -9,7 +9,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_oul6g"]
 font_size = 90
 
-[node name="Player" type="CharacterBody3D" unique_id=589600018]
+[node name="Player" type="CharacterBody3D" unique_id=589600018 groups=["plate_detection", "player"]]
 script = ExtResource("1_oul6g")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1099440124]
@@ -27,7 +27,7 @@ current = true
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=27884444]
 target_position = Vector3(0, 0, -2.5)
 
-[node name="HoldPoint" type="Marker3D" parent="Head/Camera3D" unique_id=1684993887 groups=["plate_detection"]]
+[node name="HoldPoint" type="Marker3D" parent="Head/Camera3D" unique_id=1684993887]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4114755)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1820015391]

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://da85l2u24wcca"]
+
+[ext_resource type="Script" uid="uid://j153tu2fm27e" path="res://interactable/exit.gd" id="1_hti3l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tb07l"]
+size = Vector3(1.7685547, 2.6602783, 2.3330078)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tb07l"]
+font_size = 162
+
+[node name="Exit" type="Area3D" unique_id=1234769751]
+script = ExtResource("1_hti3l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1922969563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38427734, 0.83013916, 0.6665039)
+shape = SubResource("BoxShape3D_tb07l")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1205764763]
+
+[node name="CompletionPanel" type="Panel" parent="CanvasLayer" unique_id=1642092217]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/CompletionPanel" unique_id=668315513]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 78.0
+offset_right = 1643.0
+offset_bottom = 300.0
+text = "Level complete!"
+label_settings = SubResource("LabelSettings_tb07l")

@@ -46,7 +46,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			
 			held_object = null
 			holding_object = false
-			pass
+			return
 		
 		ray.force_raycast_update()
 		

@@ -7,6 +7,8 @@ var pressed: bool = false
 var pressed_now = false
 
 func _physics_process(delta):
+	pressed_now = false
+	
 	for body in detector.get_overlapping_bodies():
 		if body.is_in_group("plate_detection"):
 			pressed_now = true

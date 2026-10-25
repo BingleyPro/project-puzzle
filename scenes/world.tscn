@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cvcicdbr3bijr" path="res://interactable/lever.tscn" id="7_i7141"]
 [ext_resource type="PackedScene" uid="uid://ci653t48aoaqv" path="res://interactable/crate.tscn" id="8_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://x55qni1kfe7t" path="res://interactable/pressure_plate.tscn" id="9_7r4gi"]
+[ext_resource type="PackedScene" uid="uid://da85l2u24wcca" path="res://interactable/exit.tscn" id="10_w7kh3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rwgxs"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -111,7 +112,12 @@ target_door = NodePath("../SM_Door_05")
 
 [node name="SM_Door_05" parent="." unique_id=1489453826 instance=ExtResource("3_4wyf3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.2719991, 2.017285, -11.969558)
+openable = false
+
+[node name="Exit" parent="." unique_id=1234769751 instance=ExtResource("10_w7kh3")]
+transform = Transform3D(5.38, 0, 0, 0, 1.93, 0, 0, 0, 2.24, 16.625254, 2.0172853, -19.017479)
 
 [editable path="Lever"]
 [editable path="Lever2"]
 [editable path="Lever3"]
+[editable path="Exit"]
