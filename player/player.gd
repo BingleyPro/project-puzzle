@@ -3,6 +3,8 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+var speed_multipler = 1
+
 @export var mouse_sensitivity: float = 0.002
 @onready var head: Node3D = $Head
 @onready var ray: RayCast3D = $Head/Camera3D/RayCast3D
@@ -26,11 +28,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			rotate_y(-event.screen_relative.x * mouse_sensitivity)
 			head.rotate_x(-event.screen_relative.y * mouse_sensitivity)
-			#head.rotation.x = clampf(
-			#	head.rotation.x,
-			#	deg_to_red(-85),
-			#	deg_to_rad(85)
-			#)
+			head.rotation.x = clampf(
+				head.rotation.x,
+				-85,
+				85,
+			)
 			
 	if Input.is_action_just_pressed("interact"):
 		ray.force_raycast_update()
@@ -57,24 +59,32 @@ func manage_interaction():
 			focused_object.call("highlight", true)
 
 func _physics_process(delta):
+	speed_multipler = 1
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+		
+	# Sprint
+	if Input.is_action_pressed("sprint") and is_on_floor():
+			speed_multipler = 1.4
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		
+	
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * SPEED * speed_multipler
+		velocity.z = direction.z * SPEED * speed_multipler
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, SPEED * speed_multipler)
+		velocity.z = move_toward(velocity.z, 0, SPEED * speed_multipler)
 		
 	# Check any interactable objects
 	manage_interaction()
