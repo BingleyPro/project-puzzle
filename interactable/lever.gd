@@ -28,7 +28,10 @@ func set_open(value: bool) -> void:
 	_is_open = value
 	var target_x = _closed_x
 	if _is_open:
-		target_x += 90
+		target_x += deg_to_rad(90)
+		
+	if _tween != null and _tween.is_valid():
+		_tween.kill()
 
 	_tween = create_tween()
 	_tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)

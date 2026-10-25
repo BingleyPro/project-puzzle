@@ -5,6 +5,7 @@
 
 [node name="Lever" type="Node3D" unique_id=1634512947]
 
-[node name="SM_Lever_Base_01" parent="." unique_id=229029903 instance=ExtResource("1_yxjek")]
-
 [node name="SM_Lever_Handle_01" parent="." unique_id=1736490360 instance=ExtResource("2_6varl")]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+
+[node name="SM_Lever_Base_01" parent="." unique_id=163812883 instance=ExtResource("1_yxjek")]
