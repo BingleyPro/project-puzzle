@@ -41,6 +41,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 90
 text = "Level 2"
 
+[node name="Level 3" type="Button" parent="CenterContainer/VBoxContainer" unique_id=401147242]
+layout_mode = 2
+theme_override_font_sizes/font_size = 90
+text = "Level 3"
+
 [node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer" unique_id=87689728]
 layout_mode = 2
 

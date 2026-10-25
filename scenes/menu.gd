@@ -6,6 +6,7 @@ func _ready() -> void:
 	
 	$"CenterContainer/VBoxContainer/Level 1".pressed.connect(start_level.bind("res://scenes/levels/level1.tscn"))
 	$"CenterContainer/VBoxContainer/Level 2".pressed.connect(start_level.bind("res://scenes/levels/level2.tscn"))
+	$"CenterContainer/VBoxContainer/Level 3".pressed.connect(start_level.bind("res://scenes/levels/level3.tscn"))
 	$CenterContainer/VBoxContainer/Quit.pressed.connect(quit_game)
 
 func start_level(path: String) -> void:
