@@ -30,11 +30,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			head.rotate_x(-event.screen_relative.y * mouse_sensitivity)
 			head.rotation.x = clampf(
 				head.rotation.x,
-				-85,
-				85,
+				deg_to_rad(-85.0),
+				deg_to_rad(85),
 			)
 			
-	if Input.is_action_just_pressed("interact"):
+	if Input.is_action_just_pressed("interact") and not event.is_echo():
 		ray.force_raycast_update()
 		
 		var target = ray.get_collider() as Node
@@ -50,13 +50,15 @@ func manage_interaction():
 		target = null
 		
 	if target != focused_object:
-		if focused_object != null:
-			focused_object.call("highlight", false)
+		if focused_object != null and is_instance_valid(focused_object):
+			if focused_object.has_method("highlight"):
+				focused_object.call("highlight", false)
 		
 		focused_object = target
 		
-		if focused_object != null:
-			focused_object.call("highlight", true)
+		if focused_object != null and is_instance_valid(focused_object):
+			if focused_object.has_method("highlight"):
+				focused_object.call("highlight", true)
 
 func _physics_process(delta):
 	speed_multipler = 1
@@ -65,12 +67,12 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
-	# Sprint
+	# Handle sprinting
 	if Input.is_action_pressed("sprint") and is_on_floor():
 			speed_multipler = 1.4
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	# Handle jump
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		
 	# Get the input direction and handle the movement/deceleration.

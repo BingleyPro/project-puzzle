@@ -16,7 +16,8 @@ func _ready() -> void:
 	sync_to_physics = true
 	
 func interact():
-	set_open(not _is_open)
+	if openable:
+		set_open(not _is_open)
 	
 func highlight(enabled: bool) -> void:
 	if highlight_mesh != null:
@@ -29,6 +30,9 @@ func set_open(value: bool) -> void:
 	var target_y = _closed_y
 	if _is_open:
 		target_y += deg_to_rad(open_angle)
+
+	if _tween != null and _tween.is_valid():
+		_tween.kill()
 
 	_tween = create_tween()
 	_tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
