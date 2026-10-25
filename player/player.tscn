@@ -6,6 +6,9 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_tb07l"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_oul6g"]
+font_size = 90
+
 [node name="Player" type="CharacterBody3D" unique_id=589600018]
 script = ExtResource("1_oul6g")
 
@@ -23,3 +26,24 @@ current = true
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=27884444]
 target_position = Vector3(0, 0, -2.5)
+
+[node name="HoldPoint" type="Marker3D" parent="Head/Camera3D" unique_id=1684993887 groups=["plate_detection"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4114755)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1820015391]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=832173089]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1646337407]
+layout_mode = 0
+offset_left = 804.0
+offset_top = 537.0
+offset_right = 1301.0
+offset_bottom = 674.0
+offset_transform_enabled = true
+text = "Interact (E)"
+label_settings = SubResource("LabelSettings_oul6g")

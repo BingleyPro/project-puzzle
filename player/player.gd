@@ -8,12 +8,17 @@ var speed_multipler = 1
 @export var mouse_sensitivity: float = 0.002
 @onready var head: Node3D = $Head
 @onready var ray: RayCast3D = $Head/Camera3D/RayCast3D
+@onready var interaction_prompt = $CanvasLayer/Control/Label
+@onready var hold_point = $Head/Camera3D/HoldPoint
 
 var focused_object = null
+var held_object: RigidBody3D
+var holding_object = false
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	$Head/Camera3D/RayCast3D.add_exception(self)
+	interaction_prompt.hide()
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape"):
@@ -34,12 +39,33 @@ func _unhandled_input(event: InputEvent) -> void:
 				deg_to_rad(85),
 			)
 			
-	if Input.is_action_just_pressed("interact") and not event.is_echo():
+	if event.is_action_pressed("interact") and not event.is_echo():
+		if holding_object:
+			remove_collision_exception_with(held_object)
+			held_object.remove_collision_exception_with(self)
+			
+			held_object = null
+			holding_object = false
+			pass
+		
 		ray.force_raycast_update()
 		
 		var target = ray.get_collider() as Node
-		if target != null and target.has_method("interact"):
-			target.call("interact")
+		if target != null:
+			if target.has_method("interact"):
+				target.call("interact")
+			
+			if target.is_in_group("pickup"):
+				# Pickup logic
+				held_object = target
+				holding_object = true
+				
+				# Prevent crate collding with player
+				add_collision_exception_with(held_object)
+				held_object.add_collision_exception_with(self)
+				
+	if event.is_action_pressed("restart") and not event.is_echo():
+		get_tree().reload_current_scene()
 			
 func manage_interaction():
 	ray.force_raycast_update()
@@ -53,12 +79,14 @@ func manage_interaction():
 		if focused_object != null and is_instance_valid(focused_object):
 			if focused_object.has_method("highlight"):
 				focused_object.call("highlight", false)
+				interaction_prompt.hide()
 		
 		focused_object = target
 		
 		if focused_object != null and is_instance_valid(focused_object):
 			if focused_object.has_method("highlight"):
 				focused_object.call("highlight", true)
+				interaction_prompt.show()
 
 func _physics_process(delta):
 	speed_multipler = 1
@@ -85,6 +113,20 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED * speed_multipler)
 		velocity.z = move_toward(velocity.z, 0, SPEED * speed_multipler)
+		
+		# Handle held object
+		if holding_object:
+			var offset = (hold_point.global_position - held_object.global_position).normalized()
+			
+			var acceleration = (
+				offset * 40 - held_object.linear_velocity * 12
+			)
+			
+			var force = (
+				acceleration.limit_length(80) * held_object.mass
+			)
+			
+			held_object.apply_central_force(force)
 		
 	# Check any interactable objects
 	manage_interaction()
