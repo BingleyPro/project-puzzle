@@ -8,6 +8,7 @@
 
 [resource]
 resource_name = "ceiling_01"
+cull_mode = 2
 albedo_texture = ExtResource("1_qg2eb")
 metallic = 1.0
 metallic_texture = ExtResource("3_0m12h")

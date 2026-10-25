@@ -41,8 +41,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3c0yi")
 
-[node name="SM_Crate_01" type="Node3D" unique_id=1148153481]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fk3pj"]
+points = PackedVector3Array(0.500015, 1.0000014, -0.45007864, 0.49991715, 0.99990356, 0.50000024, 0.500015, 0.99990356, -0.397514, 0.49991715, -1.3113022e-06, -0.50000036, 0.49991715, 0.99990356, -0.50000036, 0.4499939, 1.0000014, -0.50000036, 0.17228395, 1.0000014, -0.45007864, 0.4499939, 0.99990356, 0.50000024, 0.49991715, -1.3113022e-06, 0.49990237, -0.500015, -1.3113022e-06, -0.50000036, 0.17228395, 1.0000014, -0.50000036, -0.500015, 0.99990356, 0.49990237, -0.500015, -1.3113022e-06, 0.49990237, -0.500015, 0.99990356, -0.50000036)
 
-[node name="SM_Crate_01" type="MeshInstance3D" parent="." unique_id=897813411]
+[node name="SM_Crate_01" type="MeshInstance3D" unique_id=897813411]
 mesh = SubResource("ArrayMesh_fp81p")
 surface_material_override/0 = ExtResource("1_fk3pj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1849848415]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=926249111]
+shape = SubResource("ConvexPolygonShape3D_fk3pj")

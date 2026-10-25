@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cvcicdbr3bijr"]
+
+[ext_resource type="PackedScene" uid="uid://bj8h7y0g3rgbm" path="res://modular_dungeon/scenes/SM_Lever_Base_01.tscn" id="1_yxjek"]
+[ext_resource type="PackedScene" uid="uid://mt0gmgfahaj0" path="res://modular_dungeon/scenes/SM_Lever_Handle_01.tscn" id="2_6varl"]
+
+[node name="Lever" type="Node3D" unique_id=1634512947]
+
+[node name="SM_Lever_Base_01" parent="." unique_id=229029903 instance=ExtResource("1_yxjek")]
+
+[node name="SM_Lever_Handle_01" parent="." unique_id=1736490360 instance=ExtResource("2_6varl")]
