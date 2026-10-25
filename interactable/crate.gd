@@ -8,7 +8,9 @@ extends RigidBody3D
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 
 func _ready() -> void:
-	pass
+	# Stop the crate from spinning
+	lock_rotation = true
+	angular_velocity = Vector3.ZERO
 	
 func interact() -> void:
 	pass

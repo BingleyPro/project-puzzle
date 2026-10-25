@@ -20,6 +20,10 @@ func _ready() -> void:
 	$Head/Camera3D/RayCast3D.add_exception(self)
 	interaction_prompt.hide()
 	
+	platform_floor_layers = 0
+	platform_wall_layers = 0
+	platform_on_leave = CharacterBody3D.PLATFORM_ON_LEAVE_DO_NOTHING
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

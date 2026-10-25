@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cvcicdbr3bijr" path="res://interactable/lever.tscn" id="5_d5djh"]
 [ext_resource type="PackedScene" uid="uid://ci653t48aoaqv" path="res://interactable/crate.tscn" id="6_ok6xr"]
 [ext_resource type="Script" uid="uid://br0yk8y47wsph" path="res://scenes/levels/level2doore.gd" id="7_dj4wq"]
+[ext_resource type="PackedScene" uid="uid://da85l2u24wcca" path="res://interactable/exit.tscn" id="9_b0vvs"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rwgxs"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -111,4 +112,11 @@ openable = false
 [node name="RigidBody3D" parent="." unique_id=1570051604 instance=ExtResource("6_ok6xr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.220043, 2.3544898, -12.971533)
 
+[node name="Exit" parent="." unique_id=1234769751 instance=ExtResource("9_b0vvs")]
+transform = Transform3D(12.3330965, 0, 0, 0, 1.2544448, 0, 0, 0, 2.049117, -37.272125, 2.1156201, 6.9071593)
+
+[node name="CollisionShape3D" parent="Exit" index="0" unique_id=1922969563]
+transform = Transform3D(0.65047044, 0, 0, 0, 0.99999976, 0, 0, 0, 0.9999997, 0.6247134, 0.83013904, 0.6665025)
+
 [editable path="LeverB"]
+[editable path="Exit"]
