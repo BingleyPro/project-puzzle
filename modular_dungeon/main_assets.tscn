@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ltbulegw5b1w" path="res://modular_dungeon/scenes/SM_Wall_Doorway_Smooth_01.tscn" id="4_bk2cg"]
 [ext_resource type="PackedScene" uid="uid://dirbo3brf7y1" path="res://modular_dungeon/scenes/SM_Ceiling_01.tscn" id="5_jbnhm"]
 [ext_resource type="PackedScene" uid="uid://d3xi8qi0hiv30" path="res://modular_dungeon/scenes/SM_Doorway_Smooth_01.tscn" id="5_ro7de"]
+[ext_resource type="PackedScene" uid="uid://bmugu50wkjuqa" path="res://modular_dungeon/scenes/SM_Wall_Iron_01.tscn" id="6_bk2cg"]
 
 [node name="main_assets" type="Node3D" unique_id=1377272709]
 
@@ -21,3 +22,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
 [node name="SM_Ceiling_01" parent="." unique_id=580600136 instance=ExtResource("5_jbnhm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="SM_Wall_Iron_01" parent="." unique_id=1001368311 instance=ExtResource("6_bk2cg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)

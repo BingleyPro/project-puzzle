@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://deyofu6djtyqt"]
+
+[ext_resource type="PackedScene" uid="uid://dog1yaxc0rsto" path="res://player/player.tscn" id="1_7eb4w"]
+[ext_resource type="MeshLibrary" uid="uid://xd51bw2t6n4w" path="res://modular_dungeon/dungeon_meshes.tres" id="2_hadiw"]
+[ext_resource type="PackedScene" uid="uid://cd1kecojb3x83" path="res://modular_dungeon/scenes/SM_Door_02.tscn" id="3_72x3h"]
+[ext_resource type="Script" uid="uid://b5f2a07wbbp8w" path="res://scenes/levels/level3_brazier.gd" id="3_sru4k"]
+[ext_resource type="PackedScene" uid="uid://b0aul0uvax5o3" path="res://interactable/brazier.tscn" id="4_t275y"]
+[ext_resource type="PackedScene" uid="uid://ci653t48aoaqv" path="res://interactable/crate.tscn" id="7_a82vw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rwgxs"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_4wyf3"]
+sky_material = SubResource("ProceduralSkyMaterial_rwgxs")
+
+[sub_resource type="Environment" id="Environment_k0juu"]
+background_mode = 2
+sky = SubResource("Sky_4wyf3")
+glow_enabled = true
+
+[node name="World" type="Node3D" unique_id=487424937]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=539279124]
+environment = SubResource("Environment_k0juu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1155160265]
+transform = Transform3D(1, 0, 0, 0, 0.47492498, 0.8800263, 0, -0.8800263, 0.47492498, 0, 6.095272, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." unique_id=589600018 instance=ExtResource("1_7eb4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5442638, 3.5000005, 6.612212)
+
+[node name="Walls" type="GridMap" parent="." unique_id=918221013]
+mesh_library = ExtResource("2_hadiw")
+cell_size = Vector3(4, 4, 4)
+data = {
+"cells": PackedInt32Array(65535, 65535, 1441793, 0, 65535, 1441793, 1, 65535, 1441793, 2, 0, 655361, 2, 2, 655361, 1, 3, 1048577, 65535, 3, 1, 65534, 0, 3, 65534, 65535, 1441793, 65533, 0, 1441793, 65533, 65535, 1441793, 65534, 2, 1, 1, 1, 6, 2, 65535, 1441793, 2, 3, 1048577, 3, 3, 1048577, 4, 2, 655361, 4, 1, 655361, 4, 0, 655361, 3, 65535, 1441793, 0, 2, 1441798, 0, 3, 1441793)
+}
+
+[node name="ExtraWalls" type="GridMap" parent="." unique_id=1374038476]
+mesh_library = ExtResource("2_hadiw")
+cell_size = Vector3(4, 4, 4)
+data = {
+"cells": PackedInt32Array(65534, 0, 4, 65535, 1, 655366, 65534, 1, 1048577, 65532, 1, 1, 65534, 2, 1441793, 65533, 2, 655361, 65533, 3, 1048577, 1, 3, 655361, 65535, 3, 1048577)
+}
+
+[node name="Floor" type="GridMap" parent="." unique_id=904183336]
+mesh_library = ExtResource("2_hadiw")
+cell_size = Vector3(4, 4, 4)
+data = {
+"cells": PackedInt32Array(1, 0, 0, 0, 0, 0, 65535, 0, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 1, 2, 0, 0, 2, 0, 65535, 2, 0, 65534, 0, 1441792, 65533, 0, 1441792, 65537, 2, 1048581, 65537, 1, 1048581, 65537, 0, 1048581, 65536, 0, 1048581, 65536, 1, 1048581, 65536, 2, 1048581, 131071, 2, 1048581, 131071, 1, 1048581, 131071, 0, 1048581)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="BrazierPuzzle" type="Node" parent="." unique_id=497630460 node_paths=PackedStringArray("correct_order", "door")]
+script = ExtResource("3_sru4k")
+correct_order = [NodePath("../Brazier"), NodePath("../Brazier2"), NodePath("../Brazier3")]
+door = NodePath("../SM_Door_02")
+
+[node name="Brazier" parent="." unique_id=881790179 node_paths=PackedStringArray("puzzle") instance=ExtResource("4_t275y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.554679, 2.028002, 4.13587)
+puzzle = NodePath("../BrazierPuzzle")
+
+[node name="Brazier2" parent="." unique_id=1402281085 node_paths=PackedStringArray("puzzle") instance=ExtResource("4_t275y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.407577, 2.0549057, 4.944607)
+puzzle = NodePath("../BrazierPuzzle")
+
+[node name="Brazier3" parent="." unique_id=829653754 node_paths=PackedStringArray("puzzle") instance=ExtResource("4_t275y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6101599, 2.013329, 9.977833)
+puzzle = NodePath("../BrazierPuzzle")
+
+[node name="SM_Door_02" parent="." unique_id=1589770086 instance=ExtResource("3_72x3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9758306, 2.0172853, 2.7609007)
+
+[node name="RigidBody3D" parent="." unique_id=1022620220 instance=ExtResource("7_a82vw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.208866, 8.549491, 6.038986)
+
+[node name="RigidBody3D2" parent="." unique_id=1194280991 instance=ExtResource("7_a82vw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.605152, 22.198015, 6.2806377)
+
+[node name="RigidBody3D3" parent="." unique_id=1751823971 instance=ExtResource("7_a82vw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1367412, 34.81669, 13.967192)

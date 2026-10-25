@@ -41,8 +41,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6ytl7")
 
-[node name="SM_Wall_Iron_01" type="Node3D" unique_id=1628334191]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wh2sc"]
+points = PackedVector3Array(-0.022831174, -2.3841858e-07, -4.0078444, -0.022831174, 4.000001, -4.0078444, -0.013985657, 3.9761167, -4.2499776, 1.8626451e-09, 3.9616294, -4.259219, 0.022826707, -2.3841858e-07, -4.0078444, -0.022831174, -2.3841858e-07, 0.0067572594, 0.022826707, 4.000001, -4.0078444, 1.8626451e-09, 3.993736, -4.2384253, -0.013985657, 3.9796405, -4.247667, -0.022831174, 3.9996092, 0.0067572594, 0.013981191, 3.9761167, -4.2499776, 0.022826707, -2.3841858e-07, 0.0067572594, -4.466623e-06, 0.013703759, 0.011377811, 1.8626451e-09, 3.9616294, 0.46144962, -0.013985657, 3.9761167, 0.451746, 0.013981191, 3.9796405, -4.247667, 0.022826707, 3.9996092, 0.0067572594, -0.013985657, 3.9796405, 0.44943523, 1.8626451e-09, 3.993736, 0.44019365, 0.013981191, 3.9761167, 0.451746, 1.8626451e-09, 0.013703759, 0.011377811, 0.013981191, 3.9796405, 0.44943523)
 
-[node name="SM_Wall_Iron_01" type="MeshInstance3D" parent="." unique_id=1001368311]
+[node name="SM_Wall_Iron_01" type="MeshInstance3D" unique_id=1001368311]
 mesh = SubResource("ArrayMesh_5rp45")
 surface_material_override/0 = ExtResource("1_wh2sc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1579948310]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1009357635]
+shape = SubResource("ConvexPolygonShape3D_wh2sc")
