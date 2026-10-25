@@ -5,6 +5,9 @@ const JUMP_VELOCITY = 4.5
 
 @export var mouse_sensitivity: float = 0.002
 @onready var head: Node3D = $Head
+@onready var ray: RayCast3D = $Head/Camera3D/RayCast3D
+
+var focused_object = null
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -30,12 +33,28 @@ func _unhandled_input(event: InputEvent) -> void:
 			#)
 			
 	if Input.is_action_just_pressed("interact"):
-		var ray: RayCast3D = $Head/Camera3D/RayCast3D
 		ray.force_raycast_update()
 		
 		var target = ray.get_collider() as Node
 		if target != null and target.has_method("interact"):
 			target.call("interact")
+			
+func manage_interaction():
+	ray.force_raycast_update()
+	
+	var target = ray.get_collider() as Node
+	
+	if target != null and not target.has_method("interact"):
+		target = null
+		
+	if target != focused_object:
+		if focused_object != null:
+			focused_object.call("highlight", false)
+		
+		focused_object = target
+		
+		if focused_object != null:
+			focused_object.call("highlight", true)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -56,5 +75,8 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+		
+	# Check any interactable objects
+	manage_interaction()
 
 	move_and_slide()

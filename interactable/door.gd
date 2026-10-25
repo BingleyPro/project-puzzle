@@ -4,6 +4,9 @@ extends AnimatableBody3D
 @export var open_angle: float = 90.0
 @export var swing_time: float = 1.0
 
+@export var highlight_mesh: MeshInstance3D
+@export var highlight_material: Material
+
 var _closed_y: float
 var _is_open: bool = false
 var _tween: Tween
@@ -14,6 +17,12 @@ func _ready() -> void:
 	
 func interact():
 	set_open(not _is_open)
+	
+func highlight(enabled: bool) -> void:
+	if highlight_mesh != null:
+		highlight_mesh.material_overlay = (
+			highlight_material if enabled else null
+		)
 	
 func set_open(value: bool) -> void:
 	_is_open = value
